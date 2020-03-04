@@ -21,3 +21,13 @@ let b = 2;
 console.log(a, b) // 2, 1
 
 ```
+
+> Desctructure adalah teknik menarik elemen dari array berdasarkan posisi
+
+## Kenapa bisa?
+
+Pertama, kita mendeklarasikan array di sebelah kanan **=**
+
+> [b, a] = **[a, b]**;
+
+Kemudian, variabel **b** dan **a** _diisi kembali_ dengan nilai yang _ditarik_ dari array.
