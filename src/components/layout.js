@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Links from './links'
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -15,9 +16,7 @@ const BlogLayout = ({ location, title, children }) => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      <header style={{ display: `flex`, justifyContent: `flex-end` }}>
-        <div>Showcase</div>
-      </header>
+      <Links />
       <main>{children}</main>
       <footer style={{ marginTop: rhythm(4) }}>Build with Gatsby</footer>
     </div>

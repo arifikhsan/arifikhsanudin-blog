@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Arif Ikhsanudin Blog`,
     author: {
-      name: `Kyle Mathews`,
+      name: `Arif Ikhsanudin`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://arifikhsanudin.now.sh/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `realarifikhsan`,
     },
   },
   plugins: [
