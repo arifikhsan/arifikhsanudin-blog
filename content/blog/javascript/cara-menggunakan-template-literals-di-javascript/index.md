@@ -35,3 +35,9 @@ let name = 'Arif';
 let description = `Hello, I'm ${name + ' !!!'}`; // Hello, I'm Arif !!!
 
 ```
+
+> Perhatikan pada karakter petik satu ('), kita tidak perlu menggunakan escape character (\\)
+
+## Penutup
+
+Sekian dan terimakasih.
