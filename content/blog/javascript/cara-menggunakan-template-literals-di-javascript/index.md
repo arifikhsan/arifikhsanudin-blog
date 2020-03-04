@@ -26,7 +26,8 @@ let name = 'Arif';
 let description = `Hello, I'm ${name}`; // Hello, I'm Arif
 
 ```
-\
+<br />
+
 > Di dalam kurung keriting {}, kita juga bisa menggabungkan dengan string lagi 
 
 ```javascript
@@ -35,6 +36,7 @@ let name = 'Arif';
 let description = `Hello, I'm ${name + ' !!!'}`; // Hello, I'm Arif !!!
 
 ```
+<br />
 
 > Perhatikan pada karakter petik satu ('), kita tidak perlu menggunakan escape character (\\)
 
