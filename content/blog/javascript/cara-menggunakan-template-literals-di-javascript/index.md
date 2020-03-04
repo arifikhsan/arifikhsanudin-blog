@@ -26,7 +26,7 @@ let name = 'Arif';
 let description = `Hello, I'm ${name}`; // Hello, I'm Arif
 
 ```
-
+\
 > Di dalam kurung keriting {}, kita juga bisa menggabungkan dengan string lagi 
 
 ```javascript
