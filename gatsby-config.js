@@ -3,9 +3,9 @@ module.exports = {
     title: `Arif Ikhsanudin Blog`,
     author: {
       name: `Arif Ikhsanudin`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: `who lives and works in Magelang building useful things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A blog about anything.`,
     siteUrl: `https://arifikhsanudin.now.sh/`,
     social: {
       twitter: `realarifikhsan`,
