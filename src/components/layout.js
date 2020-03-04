@@ -1,11 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 import Links from './links'
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
-const BlogLayout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
+const BlogLayout = ({ children }) => {
 
   return (
     <div
@@ -18,7 +16,7 @@ const BlogLayout = ({ location, title, children }) => {
     >
       <Links />
       <main>{children}</main>
-      <footer style={{ marginTop: rhythm(4) }}>Build with Gatsby</footer>
+      <footer style={{ marginTop: rhythm(4), textAlign: `center` }}>Build with Gatsby</footer>
     </div>
   )
 }
