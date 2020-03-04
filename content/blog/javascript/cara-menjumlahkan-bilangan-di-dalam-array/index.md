@@ -4,7 +4,7 @@ date: "2020-03-04T20:28:00.000Z"
 description: "Cara menjumlahkan bilangan di dalam array"
 ---
 
-# Penjumlahan
+## Penjumlahan
 
 ```javascript
 

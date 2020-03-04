@@ -4,7 +4,7 @@ date: "2020-03-04T20:28:00.000Z"
 description: "Cara menggunakan Template Literal pada JavaScript. Atau cara menggabungkan variabel tanpa tanda + (plus)"
 ---
 
-# Pembuka
+## Pembuka
 
 Template Literal adalah cara untuk menggabungkan variabel ke dalam sebuah string.
 
