@@ -11,7 +11,7 @@ export default function links() {
             textDecoration: `none`,
             color: `inherit`,
           }}
-          to={`#`}
+          to={`/`}
         >
           Home
         </Link>
@@ -22,7 +22,7 @@ export default function links() {
             textDecoration: `none`,
             color: `inherit`,
           }}
-          to={`#`}
+          to={`/`}
         >
           Showcase
         </Link>

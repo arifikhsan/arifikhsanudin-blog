@@ -4,6 +4,99 @@ date: "2015-05-28T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 ---
 
+
+```ruby
+def apa
+  5.times do |index|
+      puts "nomor: #{index}"
+  end
+end
+```
+
+```yaml
+
+name: Second test
+on: [push]
+jobs:
+  test:
+    name: Test on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "1.12.13+hotfix.8"
+          channel: "stable" # dev, stable, beta
+      - run: flutter pub get
+      - run: flutter test
+      - run: flutter build apk
+
+  android_driver_test:
+    name: UI Test on target ${{ matrix.target }} API ${{ matrix.api-level }}
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        api-level: [21, 23, 29]
+        target: [default, google_apis]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "1.12.13+hotfix.8"
+          channel: "stable"
+
+      - name: List all simulators
+        run: $ANDROID_HOME/tools/bin/avdmanager list
+
+      - name: run tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api-level }}
+          target: ${{ matrix.target }}
+          arch: x86_64
+          profile: Nexus 6
+          script: flutter drive --target=test_driver/app.dart
+
+  ios_drive_test:
+    strategy:
+      matrix:
+        device:
+          - "iPhone 8 (13.3)"
+          - "iPhone 8 Plus (13.3)"
+          - "iPhone 11 (13.3)"
+          - "iPhone 11 Pro Max (13.3)"
+      fail-fast: false
+    runs-on: macos-latest
+    steps:
+      - name: List all simulators
+        run: xcrun instruments -s
+      - name: Start Simulator
+        run: |
+          UDID=$(
+            xcrun instruments -s |
+            awk \
+              -F ' *[][]' \
+              -v 'device=${{ matrix.device }}' \
+              '$1 == device { print $2 }'
+          )
+          xcrun simctl boot "${UDID:?No Simulator with this name found}"
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "1.12.13+hotfix.8"
+          channel: "stable"
+      - name: Run Flutter Driver tests
+        run: flutter drive --target=test_driver/app.dart
+
+```
 Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
