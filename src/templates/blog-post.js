@@ -4,11 +4,9 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-import TransitionLink from 'gatsby-plugin-transition-link'
 import { TimelineMax, Power1 } from 'gsap'
 
 import BlogLayout from "../components/blog-layout"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 class BlogPostTemplate extends React.Component {
   constructor(props) {
@@ -98,37 +96,16 @@ class BlogPostTemplate extends React.Component {
           >
             <li>
               {previous && (
-                <AniLink
-                  swipe
-                  to={previous.fields.slug}
-                  rel="prev"
-                // exit={{
-                //   length: 2,
-                //   trigger: ({ exit }) => this.exitHorizontal(exit, 'left'),
-                // }}
-                // entry={{ delay: 1 }}
-                >
+                <Link to={previous.fields.slug} rel="prev">
                   ← {previous.frontmatter.title}
-                </AniLink>
+                </Link>
               )}
             </li>
             <li>
               {next && (
-                <AniLink
-                  swipe
-                  to={next.fields.slug}
-                  rel="next"
-                // exit={{
-                //   length: 2,
-                //   trigger: ({ exit }) => this.exitHorizontal(exit, 'right'),
-                // }}
-                // entry={{
-                //   delay: 1,
-                //   state: { pass: 'Whatever you want', to: 'the next page' },
-                // }}
-                >
+                <Link to={next.fields.slug} rel="next">
                   {next.frontmatter.title} →
-                </AniLink>
+                </Link>
               )}
             </li>
           </ul>

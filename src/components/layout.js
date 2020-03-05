@@ -16,7 +16,6 @@ const BlogLayout = ({ children }) => {
     >
       <Links />
       <main>{children}</main>
-      <footer style={{ marginTop: rhythm(4), textAlign: `center` }}>Build with Gatsby</footer>
     </div>
   )
 }

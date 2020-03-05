@@ -28,7 +28,7 @@ export default function links() {
         </AniLink>
         <AniLink paintDrip
           style={{
-            marginLeft: rhythm(2),
+            marginLeft: rhythm(1.5),
             boxShadow: `none`,
             textDecoration: `none`,
             color: `inherit`,
