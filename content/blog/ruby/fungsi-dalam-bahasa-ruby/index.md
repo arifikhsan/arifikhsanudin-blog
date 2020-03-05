@@ -2,7 +2,6 @@
 title: Penggunaan fungsi atau method dalam bahasa ruby
 date: "2020-02-26T10:19:00.000Z"
 description: "Penggunaan fungsi atau method dalam bahasa ruby"
-category: ruby
 ---
 
 ## Pembukaan
