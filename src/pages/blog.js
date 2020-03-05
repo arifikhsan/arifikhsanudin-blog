@@ -19,6 +19,7 @@ const BlogIndex = ({ data, location }) => {
             <header>
               <h3
                 style={{
+                  marginTop: rhythm(1),
                   marginBottom: rhythm(1 / 4),
                 }}
               >
