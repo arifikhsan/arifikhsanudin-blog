@@ -19,15 +19,15 @@ const IndexPage = ({ data, location }) => {
           alignContent: `center`,
           textAlign: `center`,
         }}>
-          <h1 style={{}}>Hello, my name is Arif Ikhsanudin</h1>
+          <h1>Hello, my name is Arif Ikhsanudin</h1>
           <h2>I am a Fullstack Developer</h2>
-
         </div>
-        <div style={{
-          marginTop: rhythm(4),
-          display: `flex`,
-          justifyContent: `space-around`
-        }}>
+        <div
+          style={{
+            marginTop: rhythm(4),
+            display: `flex`,
+            justifyContent: `space-around`
+          }}>
           <div>
             <p>I like to work with</p>
             <div style={{ display: `flex`, justifyContent: `center` }}>
