@@ -1,7 +1,7 @@
 ---
-title: Flutter - Tutorial build flutter pada github actions
-date: "2020-02-27T10:19:00.000Z"
-description: "Tutorial build flutter pada github actions"
+title: Flutter - Tutorial build flutter pada github actions dengan tiga operating system
+date: "2020-03-06T08:19:00.000Z"
+description: "Tutorial build flutter pada github actions dengan tiga operating system"
 ---
 
 ## Pembukaan
