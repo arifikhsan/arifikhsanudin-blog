@@ -1,5 +1,5 @@
 ---
-title: Cara build dan test proyek android kotlin di github actions
+title: Android - Cara build dan test proyek android kotlin di github actions
 date: "2020-03-05T18:56:00.000Z"
 description: "Cara build dan test proyek android kotlin di github actions. Dilanjutkan dengan upload artifact"
 ---

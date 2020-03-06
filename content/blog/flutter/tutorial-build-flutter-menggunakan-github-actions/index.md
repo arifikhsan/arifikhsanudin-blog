@@ -1,5 +1,5 @@
 ---
-title: Tutorial build flutter pada github actions
+title: Flutter - Tutorial build flutter pada github actions
 date: "2020-02-27T10:19:00.000Z"
 description: "Tutorial build flutter pada github actions"
 ---

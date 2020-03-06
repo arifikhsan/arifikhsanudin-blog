@@ -1,8 +1,7 @@
 ---
-title: Percabangan if satu baris di bahasa pemrograman ruby
+title: Ruby - Percabangan if satu baris di bahasa pemrograman ruby
 date: "2020-02-26T08:01:03.284Z"
 description: "Percabangan if satu baris di bahasa pemrograman ruby"
-category: ruby
 ---
 
 ## Apa itu percabangan satu baris?
