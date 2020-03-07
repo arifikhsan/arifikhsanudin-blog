@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-import { TimelineMax, Power1 } from 'gsap'
+import { TimelineMax, Power1 } from "gsap"
 
 import BlogLayout from "../components/blog-layout"
 
@@ -22,13 +22,13 @@ class BlogPostTemplate extends React.Component {
   exitHorizontal = ({ length }, direction) => {
     const seconds = length
 
-    const directionTo = direction === 'left' ? '-100%' : '100%'
-    const directionFrom = direction === 'left' ? '100%' : '-100%'
+    const directionTo = direction === "left" ? "-100%" : "100%"
+    const directionFrom = direction === "left" ? "100%" : "-100%"
 
     return new TimelineMax()
-      .set(this.transitionCover, { x: directionFrom, display: 'block' })
+      .set(this.transitionCover, { x: directionFrom, display: "block" })
       .to(this.transitionCover, seconds / 2, {
-        x: '0%',
+        x: "0%",
         ease: Power1.easeInOut,
       })
       .set(this.layoutWrapper, { opacity: 0 })
@@ -72,7 +72,8 @@ class BlogPostTemplate extends React.Component {
           </header>
           <section
             style={{ marginTop: rhythm(2) }}
-            dangerouslySetInnerHTML={{ __html: post.html }} />
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
           <hr
             style={{
               marginBottom: rhythm(1),
@@ -94,16 +95,42 @@ class BlogPostTemplate extends React.Component {
               padding: 0,
             }}
           >
-            <li>
+            <li
+              style={{
+                width: `50%`,
+                textAlign: `justify`,
+                paddingRight: rhythm(1 / 2),
+              }}
+            >
               {previous && (
-                <Link to={previous.fields.slug} rel="prev">
+                <Link
+                  to={previous.fields.slug}
+                  rel="prev"
+                  style={{
+                    textDecoration: `none`,
+                    boxShadow: `none`,
+                  }}
+                >
                   ← {previous.frontmatter.title}
                 </Link>
               )}
             </li>
-            <li>
+            <li
+              style={{
+                width: `50%`,
+                textAlign: `justify`,
+                paddingLeft: rhythm(1 / 2),
+              }}
+            >
               {next && (
-                <Link to={next.fields.slug} rel="next">
+                <Link
+                  to={next.fields.slug}
+                  rel="next"
+                  style={{
+                    textDecoration: `none`,
+                    boxShadow: `none`,
+                  }}
+                >
                   {next.frontmatter.title} →
                 </Link>
               )}
