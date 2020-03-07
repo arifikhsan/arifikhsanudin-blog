@@ -3,9 +3,12 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
+import { useMediaQuery } from "react-responsive"
 
 const ShowcasePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
+  console.log(isTabletOrMobile)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -26,18 +29,27 @@ const ShowcasePage = ({ data, location }) => {
           <h2>Flutter</h2>
           <div
             style={{
-              marginTop: rhythm(4),
-              // display: `flex`,
+              // padding: rhythm(2 / 4),
+              display: `flex`,
+              flexWrap: `wrap`,
               // justifyContent: `space-around`,
             }}
           >
-            <div style={{ maxWidth: `200` }}>
-              <img src="https://via.placeholder.com/250" />
-              <p>Dark Theme Switch using BLOC</p>
+            <div
+              style={{
+                width: isTabletOrMobile ? `100%` : `50%`,
+                marginTop: rhythm(1.5),
+                padding: rhythm(1),
+              }}
+            >
+              <img src="https://via.placeholder.com/400x250" alt="" />
+              <h3 style={{ marginTop: rhythm(1 / 4) }}>
+                Dark Theme Switch using BLoC
+              </h3>
               <p>
                 Switching theme using button from dark to light and vice versa.
-                all code are tested using unit test, integration test, and
-                driver test.
+                State of theme is done using Business Logic Components. All code
+                are tested using unit test, integration test, and driver test.
               </p>
               <div>
                 <span>Github</span>
@@ -46,9 +58,17 @@ const ShowcasePage = ({ data, location }) => {
                 <span>Workflow</span>
               </div>
             </div>
-            <div>
-              <img src="https://via.placeholder.com/250" />
-              <p>Flutter Github Action Automated Build, Test, and Upload Artifact</p>
+            <div
+              style={{
+                width: isTabletOrMobile ? `100%` : `50%`,
+                marginTop: rhythm(1.5),
+                padding: rhythm(1),
+              }}
+            >
+              <img src="https://via.placeholder.com/400x250" alt="" />
+              <h3 style={{ marginTop: rhythm(1 / 4) }}>
+                Flutter Github Action Automated Build, Test, and Upload Artifact
+              </h3>
               <p>
                 Build flutter project in Github Action. Automated tests
                 including unit testing, integration testing, and driver testing.
