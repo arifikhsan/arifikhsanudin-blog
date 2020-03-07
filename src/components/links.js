@@ -26,7 +26,7 @@ export default function links() {
             textDecoration: `none`,
             color: `inherit`,
           }}
-          to={`/`}
+          to={`/showcase`}
         >
           Showcase
         </AniLink>
