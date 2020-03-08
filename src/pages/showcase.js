@@ -8,7 +8,6 @@ import { useMediaQuery } from "react-responsive"
 const ShowcasePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
-  console.log(isTabletOrMobile)
 
   return (
     <Layout location={location} title={siteTitle}>

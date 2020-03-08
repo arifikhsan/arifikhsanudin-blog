@@ -11,9 +11,11 @@ import flutter from "../../content/assets/svg/flutter.svg"
 import android from "../../content/assets/svg/android.svg"
 import github from "../../content/assets/svg/github.svg"
 import gitlab from "../../content/assets/svg/gitlab.svg"
+import { useMediaQuery } from "react-responsive"
 
 const IndexPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
+  const isMobile = useMediaQuery({ query: "(max-width: 425px)" })
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -36,11 +38,11 @@ const IndexPage = ({ data, location }) => {
           style={{
             marginTop: rhythm(4),
             display: `flex`,
-            justifyContent: `space-around`,
+            flexWrap: `wrap`,
             textAlign: `center`,
           }}
         >
-          <div>
+          <div style={{ width: isMobile ? `100%` : `50%` }}>
             <p>I like to work with</p>
             <div
               style={{
@@ -49,18 +51,39 @@ const IndexPage = ({ data, location }) => {
                 justifyContent: `center`,
               }}
             >
-              <img style={{ height: 24, margin: 4 }} src={rails} />
-              <img style={{ height: 24, margin: 4 }} src={vue} />
-              <img style={{ height: 24, margin: 4 }} src={react} />
-              <img style={{ height: 24, margin: 4 }} src={flutter} />
-              <img style={{ height: 24, margin: 4 }} src={android} />
+              <img style={{ height: 24, margin: 4 }} src={rails} alt="rails" />
+              <img style={{ height: 24, margin: 4 }} src={vue} alt="vue" />
+              <img style={{ height: 24, margin: 4 }} src={react} alt="react" />
+              <img
+                style={{ height: 24, margin: 4 }}
+                src={flutter}
+                alt="flutter"
+              />
+              <img
+                style={{ height: 24, margin: 4 }}
+                src={android}
+                alt="android"
+              />
             </div>
           </div>
-          <div>
+          <div
+            style={{
+              width: isMobile ? `100%` : `50%`,
+              marginTop: isMobile && rhythm(2),
+            }}
+          >
             <p>Find me on</p>
             <div style={{ display: `flex`, justifyContent: `center` }}>
-              <img style={{ height: 24, margin: 4 }} src={github} />
-              <img style={{ height: 24, margin: 4 }} src={gitlab} />
+              <img
+                style={{ height: 24, margin: 4 }}
+                src={github}
+                alt="github"
+              />
+              <img
+                style={{ height: 24, margin: 4 }}
+                src={gitlab}
+                alt="gitlab"
+              />
             </div>
           </div>
         </div>
