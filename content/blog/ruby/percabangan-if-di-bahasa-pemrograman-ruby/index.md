@@ -13,7 +13,8 @@ Misalnya
 
 *Aksi*nya adalah _bawa payung_. sementara *kondisi*nya adalah _jika mendung_
 
-## Bagaimana cara melakukan percabangan?
+## Cara melakukan percabangan
+
 Berikut adalah cara kita melakukan percabangan di ruby
 
 ```ruby
@@ -42,10 +43,23 @@ def mendung
     true
 end
 
-if mendung
-    p 'bawalah payung'
+def sebuah_fungsi
+  if mendung
+      p 'bawalah payung'
+  end
 end
 
 ```
 
-Mudah bukan?
+## If dibelakang
+
+Percabangan pada ruby dapat ditulis dengan meletakkan if dibelakang
+
+```ruby
+
+def sebuah_fungsi
+  p 'bawa payung' if mendung
+end
+
+```
+

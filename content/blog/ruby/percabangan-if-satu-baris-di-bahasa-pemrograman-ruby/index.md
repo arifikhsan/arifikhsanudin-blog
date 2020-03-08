@@ -7,7 +7,7 @@ description: "Percabangan if satu baris di bahasa pemrograman ruby"
 ## Apa itu percabangan satu baris?
 Sama halnya dengan percabangan yang lain, namun kali ini hanya menggunakan satu baris saja.
 
-## Percabangan satu baris
+## Percabangan if satu baris
 Berikut adalah cara kita melakukan percabangan di ruby seperti biasa
 
 ```ruby
@@ -32,6 +32,16 @@ Jika dimasukkan ke dalam sebuah fungsi, maka akan menjadi seperti ini
 
 def sebuah_fungsi
     p 'bawalah payung' if mendung
+end
+
+```
+
+## Percabangan if else satu baris
+
+```ruby
+
+def sebuah_fungsi
+    mendung ? bawa_payung : tidak_bawa_payung
 end
 
 ```
