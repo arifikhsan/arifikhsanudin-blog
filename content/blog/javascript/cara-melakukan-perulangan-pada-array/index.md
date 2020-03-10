@@ -1,5 +1,5 @@
 ---
-title: JavaScript - Cara melakukan perulangan for loop pada array
+title: Cara melakukan perulangan for loop pada array
 date: "2020-03-04T20:28:00.000Z"
 description: "Cara melakukan perulangan for loop pada array"
 ---

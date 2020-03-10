@@ -1,5 +1,5 @@
 ---
-title: JavaScript - Cara menukar nilai dari dua buah variabel tanpa membuat variabel baru
+title: Cara menukar nilai dari dua buah variabel tanpa membuat variabel baru
 date: "2020-03-04T20:28:00.000Z"
 description: "Cara menukar nilai dari dua buah variabel tanpa membuat variabel baru dengan cara destructor array"
 ---

@@ -12,7 +12,6 @@ Semakin sering kita melakukan test, maka semakin yakin pula kita mengenai aplika
 
 Dalam tutorial ini saya akan menjelaskan tentang build dan tes aplikasi flutter di github actions
 
-
 ## Isi
 
 Buatlah sebuah file di projek flutter. Namanya bebas.

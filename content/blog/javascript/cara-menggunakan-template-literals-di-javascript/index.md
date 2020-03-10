@@ -1,5 +1,5 @@
 ---
-title: JavaScript - Cara menggunakan Template Literal pada JavaScript
+title: Cara menggunakan Template Literal pada JavaScript
 date: "2020-03-04T20:28:00.000Z"
 description: "Cara menggunakan Template Literal pada JavaScript. Atau cara menggabungkan variabel tanpa tanda + (plus)"
 ---
