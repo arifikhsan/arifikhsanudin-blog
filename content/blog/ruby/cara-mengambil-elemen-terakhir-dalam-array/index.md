@@ -1,5 +1,5 @@
 ---
-title: Ruby - Cara mengambil elemen terakhir dalam array
+title: Cara mengambil elemen terakhir dalam array | Ruby
 date: "2020-03-05T19:53:00.000Z"
 description: "Cara mengambil elemen terakhir dalam array dengan indeks, fungsi last dan fungsi pop"
 ---

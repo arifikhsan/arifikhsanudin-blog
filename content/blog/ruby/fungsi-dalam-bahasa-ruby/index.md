@@ -1,5 +1,5 @@
 ---
-title: Ruby - Penggunaan fungsi atau method dalam bahasa ruby
+title: Penggunaan fungsi atau method dalam bahasa ruby | Ruby
 date: "2020-02-26T10:19:00.000Z"
 description: "Penggunaan fungsi atau method dalam bahasa ruby"
 ---

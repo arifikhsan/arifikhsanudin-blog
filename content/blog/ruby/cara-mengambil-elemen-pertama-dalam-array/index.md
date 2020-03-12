@@ -1,5 +1,5 @@
 ---
-title: Ruby - Cara mengambil elemen pertama dalam array
+title: Cara mengambil elemen pertama dalam array | Ruby
 date: "2020-03-05T18:56:00.000Z"
 description: "Cara mengambil elemen pertama dalam array dengan indeks dan fungsi first"
 ---

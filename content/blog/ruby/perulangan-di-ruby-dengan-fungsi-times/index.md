@@ -1,5 +1,5 @@
 ---
-title: Ruby - Perulangan di ruby dengan fungsi times
+title: Perulangan di ruby dengan fungsi times | Ruby
 date: "2020-02-26T10:19:00.000Z"
 description: "Perulangan di ruby dengan fungsi times"
 ---

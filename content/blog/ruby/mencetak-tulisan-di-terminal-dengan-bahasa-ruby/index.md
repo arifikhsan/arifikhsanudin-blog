@@ -1,5 +1,5 @@
 ---
-title: Ruby - Mencetak tulisan di terminal dengan bahasa ruby
+title: Mencetak tulisan di terminal dengan bahasa ruby | Ruby
 date: "2020-02-26T10:07:00.000Z"
 description: "Mencetak tulisan di terminal dengan bahasa ruby"
 category: ruby

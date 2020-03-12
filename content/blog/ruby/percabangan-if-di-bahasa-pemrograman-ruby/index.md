@@ -1,5 +1,5 @@
 ---
-title: Ruby - Percabangan if di bahasa pemrograman ruby
+title: Percabangan if di bahasa pemrograman ruby | Ruby
 date: "2020-02-26T08:02:03.284Z"
 description: "Percabangan if di bahasa pemrograman ruby"
 category: ruby

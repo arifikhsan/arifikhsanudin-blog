@@ -35,12 +35,11 @@ plugins: [`gatsby-plugin-postcss`],
 3. Buat file `postcss.config.js`
 
 ```javascript
-
 module.exports = () => ({
   plugins: [require("tailwindcss")],
 })
-
 ```
+
 4. Buat file `tailwind.css` pada direktori `/styles`.
 
 ```css
@@ -60,17 +59,14 @@ npx tailwind init
 6. Import file `tailwind.css` ke file JSX.
 
 ```javascript
-
-import '../styles/tailwind.css'
-
+import "../styles/tailwind.css"
 ```
 
 7. Kelas TailwindCSS siap digunakan.
 
 ```jsx
-
 import React from "react"
-import '../styles/tailwind.css'
+import "../styles/tailwind.css"
 
 export default () => (
   <div>
@@ -78,7 +74,6 @@ export default () => (
     <h1 className="text-red-400">World!</h1>
   </div>
 )
-
 ```
 
 ## Sumber
