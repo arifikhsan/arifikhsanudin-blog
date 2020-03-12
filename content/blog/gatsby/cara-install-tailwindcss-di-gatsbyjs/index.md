@@ -11,7 +11,16 @@ description: Cara install Tailwind CSS di Gatsby JS menggunakan PostCSS
 ```shell
 
 npm install tailwindcss --save-dev
-npm install --save gatsby-plugin-postcss
+npm install gatsby-plugin-postcss --save
+
+```
+
+Atau jika menggunakan yarn:
+
+```shell
+
+yarn add tailwindcss --dev
+yarn add gatsby-plugin-postcss
 
 ```
 
