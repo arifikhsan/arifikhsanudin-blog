@@ -8,8 +8,8 @@ description: Cara menggunakan environment variables di GatsbyJS
 
 Pada pengaturan bawaan, Gatsby mendukung dua environments:
 
-1. Development. Ketika perintah `gatsby develop` dijalankan.
-2. Production. Ketika perintah `gatsby build` atau `gatsby serve` dijalankan.
+1. **Development**. Ketika perintah `gatsby develop` dijalankan.
+2. **Production**. Ketika perintah `gatsby build` atau `gatsby serve` dijalankan.
 
 ## Cara menambahkan variabel
 
@@ -26,7 +26,7 @@ require("dotenv").config({
 
 2. Buat file environment variable untuk masing masing environment.
 
-- `.env.development`
+**.env.development**
 
 ```text
 
@@ -35,8 +35,7 @@ API_KEY=927349872349798
 
 ```
 
-- `.env.production`
-
+**.env.production**
 ```text
 
 GATSBY_API_URL=https://example.com/api

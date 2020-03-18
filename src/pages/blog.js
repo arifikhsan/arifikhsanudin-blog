@@ -31,7 +31,7 @@ const BlogIndex = ({ data, location }) => {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small style={{opacity: `0.8`}}>{node.frontmatter.date}</small>
             </header>
             <section>
               <p

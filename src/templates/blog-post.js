@@ -64,6 +64,7 @@ class BlogPostTemplate extends React.Component {
               style={{
                 ...scale(-1 / 5),
                 display: `block`,
+                opacity: `0.8`,
                 marginBottom: rhythm(1),
               }}
             >
