@@ -12,6 +12,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <BlogLayout location={location} title={siteTitle}>
       <SEO title="All posts" />
+      <h2 style={{textAlign: `center`}}>Blog</h2>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (

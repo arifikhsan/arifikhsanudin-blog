@@ -5,13 +5,13 @@ import { graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import { useMediaQuery } from "react-responsive"
 
-const ShowcasePage = ({ data, location }) => {
+const ExperimentPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Showcase" />
+      <SEO title="Experiment" />
       <div style={{ textAlign: `center` }}>
         <div
           style={{
@@ -22,7 +22,7 @@ const ShowcasePage = ({ data, location }) => {
             alignContent: `center`,
           }}
         >
-          <h1>Showcase</h1>
+          <h1>Experiment</h1>
         </div>
         <div>
           <h2>Flutter</h2>
@@ -87,7 +87,7 @@ const ShowcasePage = ({ data, location }) => {
   )
 }
 
-export default ShowcasePage
+export default ExperimentPage
 
 export const pageQuery = graphql`
   query {

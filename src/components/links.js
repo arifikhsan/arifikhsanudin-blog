@@ -26,9 +26,9 @@ export default function links() {
             textDecoration: `none`,
             color: `inherit`,
           }}
-          to={`/showcase`}
+          to={`/experiment`}
         >
-          Showcase
+          Experiment
         </AniLink>
         <AniLink paintDrip color="rebeccapurple"
           style={{
