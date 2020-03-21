@@ -41,9 +41,10 @@ yarn prod
 
 ## TODO
 
-[x] Titleize title
-[x] Limit 10 Post
-[x] Add Sitemap
-[x] Move content to src
-[x] Move google analytic code to .env.production
-[] I18n Locale for important page
+- [x] Titleize title
+- [x] Limit 10 Post
+- [x] Add Sitemap
+- [x] Move content to src
+- [x] Move google analytic code to .env.production
+- [] I18n Locale for important page
+- [] Icon import using graphql
