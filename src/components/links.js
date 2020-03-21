@@ -9,7 +9,7 @@ export default function links() {
       justifyContent: `space-between`,
       alignItems: `center`,
     }}>
-      <AniLink paintDrip color="rebeccapurple"
+      <AniLink paintDrip hex="#1E88E5"
         style={{
           boxShadow: `none`,
           textDecoration: `none`,
@@ -20,7 +20,17 @@ export default function links() {
         Home
         </AniLink>
       <div style={{ display: `flex`, justifyContent: `flex-end`, }}>
-        <AniLink paintDrip color="rebeccapurple"
+        <AniLink paintDrip hex="#1E88E5"
+          style={{
+            boxShadow: `none`,
+            textDecoration: `none`,
+            color: `inherit`,
+          }}
+          to={`/service`}
+        >
+          Service
+        </AniLink>
+        <AniLink paintDrip hex="#1E88E5"
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
@@ -30,7 +40,7 @@ export default function links() {
         >
           Experiment
         </AniLink>
-        <AniLink paintDrip color="rebeccapurple"
+        <AniLink paintDrip hex="#1E88E5"
           style={{
             marginLeft: rhythm(1.5),
             boxShadow: `none`,

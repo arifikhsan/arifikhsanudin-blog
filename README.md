@@ -48,3 +48,5 @@ yarn prod
 - [x] Move google analytic code to .env.production
 - [] I18n Locale for important page
 - [] Icon import using graphql
+- [x] custom favicon with letter 'ai'
+- [] change inline style to styled react component
