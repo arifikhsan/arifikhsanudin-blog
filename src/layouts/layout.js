@@ -1,5 +1,5 @@
 import React from "react"
-import Links from './links'
+import Links from '../components/links'
 
 import { rhythm } from "../utils/typography"
 

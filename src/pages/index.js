@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
+import Layout from "../layouts/layout"
 import { graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 

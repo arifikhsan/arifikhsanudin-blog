@@ -1,7 +1,7 @@
 import React from "react"
 
 import { rhythm } from "../utils/typography"
-import Links from "./links"
+import Links from "../components/links"
 
 const BlogLayout = ({ children }) => {
   return (

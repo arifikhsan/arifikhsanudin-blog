@@ -4,3 +4,6 @@ description: Nulla consequat anim magna dolore qui deserunt labore ad culpa sunt
 ---
 
 ## Fitur
+
+1. Drag and Drop page builder
+2. Woocomerce

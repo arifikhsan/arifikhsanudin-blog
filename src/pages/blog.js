@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import BlogLayout from "../components/blog-layout"
+import BlogLayout from "../layouts/blog-layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import titleize from "titleize"

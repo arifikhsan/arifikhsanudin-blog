@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import { TimelineMax, Power1 } from "gsap"
 import titleize from 'titleize'
-import BlogLayout from "../components/blog-layout"
+import BlogLayout from "../layouts/blog-layout"
 
 class BlogPostTemplate extends React.Component {
   constructor(props) {

@@ -4,40 +4,10 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-import { TimelineMax, Power1 } from "gsap"
 import titleize from 'titleize'
-import BlogLayout from "../components/blog-layout"
+import BlogLayout from "../layouts/blog-layout"
 
 class ServicePageTemplate extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.layoutContents = React.createRef()
-    this.layoutWrapper = React.createRef()
-    this.transitionCover = React.createRef()
-
-    this.exitHorizontal = this.exitHorizontal.bind(this)
-  }
-
-  exitHorizontal = ({ length }, direction) => {
-    const seconds = length
-
-    const directionTo = direction === "left" ? "-100%" : "100%"
-    const directionFrom = direction === "left" ? "100%" : "-100%"
-
-    return new TimelineMax()
-      .set(this.transitionCover, { x: directionFrom, display: "block" })
-      .to(this.transitionCover, seconds / 2, {
-        x: "0%",
-        ease: Power1.easeInOut,
-      })
-      .set(this.layoutWrapper, { opacity: 0 })
-      .to(this.transitionCover, seconds / 2, {
-        x: directionTo,
-        ease: Power1.easeInOut,
-      })
-  }
-
   render() {
     const { data, pageContext, location } = this.props
     const post = data.markdownRemark
@@ -145,7 +115,7 @@ class ServicePageTemplate extends React.Component {
 export default ServicePageTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query ServicePageBySlug($slug: String!) {
     site {
       siteMetadata {
         title
@@ -157,7 +127,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
       }
     }
