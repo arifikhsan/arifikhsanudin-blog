@@ -1,29 +1,50 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: `Arif Ikhsanudin Blog`,
     author: {
       name: `Arif Ikhsanudin`,
-      summary: `who lives and works in Magelang building useful things.`,
+      summary: `who lives in Magelang building useful things.`,
     },
-    description: `A blog about anything.`,
-    siteUrl: `https://arifikhsanudin.now.sh/`,
+    description: `A blog about programming.`,
+    siteUrl: `https://arifikhsanudin.now.sh`,
     social: {
       twitter: `realarifikhsan`,
+      github: `arifikhsan`,
+      gitlab: `arifikhsan`,
+      whatsapp: `089516784488`,
+      email: `arif.ikhsanudin.id@gmail.com`,
     },
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/src/contents/blogs`,
         name: `blog`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
+        path: `${__dirname}/src/contents/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/contents/services`,
+        name: `service`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/contents/experiments`,
+        name: `experiment`,
       },
     },
     {
@@ -81,5 +102,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-sitemap`,
   ],
 }

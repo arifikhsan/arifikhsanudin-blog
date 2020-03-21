@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import { TimelineMax, Power1 } from "gsap"
-
+import titleize from 'titleize'
 import BlogLayout from "../components/blog-layout"
 
 class BlogPostTemplate extends React.Component {
@@ -58,7 +58,7 @@ class BlogPostTemplate extends React.Component {
                 marginBottom: 0,
               }}
             >
-              {post.frontmatter.title}
+              {titleize(post.frontmatter.title)}
             </h1>
             <p
               style={{

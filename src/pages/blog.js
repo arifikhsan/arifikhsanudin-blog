@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import BlogLayout from "../components/blog-layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import titleize from "titleize"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -12,7 +13,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <BlogLayout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <h2 style={{textAlign: `center`}}>Blog</h2>
+      <h2 style={{ textAlign: `center` }}>Blog Terbaru</h2>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -24,14 +25,11 @@ const BlogIndex = ({ data, location }) => {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link
-                  style={{ boxShadow: `none` }}
-                  to={node.fields.slug}
-                >
-                  {title}
+                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                  {titleize(title)}
                 </Link>
               </h3>
-              <small style={{opacity: `0.8`}}>{node.frontmatter.date}</small>
+              <small style={{ opacity: `0.8` }}>{node.frontmatter.date}</small>
             </header>
             <section>
               <p
@@ -56,7 +54,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 10) {
       edges {
         node {
           excerpt
