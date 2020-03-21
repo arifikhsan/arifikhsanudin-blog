@@ -1,7 +1,7 @@
 ---
 title: Cara mengambil elemen kedua sampai kelima dalam array | Ruby on Rails
 date: "2020-03-05T18:56:00.000Z"
-description: "Cara mengambil elemen kedua sampai kelima dalam array pada ruby on rails, dengan menggunakan fungsi .second, .third, fourth, fifth"
+description: Cara mengambil elemen kedua sampai kelima dalam array pada ruby on rails, dengan menggunakan fungsi .second, .third, fourth, fifth
 ---
 
 ## Kenapa kedua sampai kelima?

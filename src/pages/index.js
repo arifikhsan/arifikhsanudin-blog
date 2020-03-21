@@ -84,6 +84,7 @@ const IndexPage = ({ data, location }) => {
                 src={gitlab}
                 alt="gitlab"
               />
+              {/* // TODO: Add Whatsapp Contact */}
             </div>
           </div>
         </div>
