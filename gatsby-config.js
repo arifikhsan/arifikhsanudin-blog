@@ -29,7 +29,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/contents/assets`,
+        path: `${__dirname}/src/assets`,
         name: `assets`,
       },
     },
@@ -74,7 +74,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-149713437-3`,
+        trackingId: process.env.GATSBY_GA_TRACKING_ID,
       },
     },
     `gatsby-plugin-feed`,
@@ -87,7 +87,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `src/assets/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,

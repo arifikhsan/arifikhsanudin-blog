@@ -54,7 +54,11 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 10) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 10
+      filter: { fileAbsolutePath: { regex: "\/blogs/" } }
+    ) {
       edges {
         node {
           excerpt
@@ -62,7 +66,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMMM YYYY")
             title
             description
           }
