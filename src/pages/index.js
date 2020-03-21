@@ -17,20 +17,22 @@ const IndexPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const isMobile = useMediaQuery({ query: "(max-width: 425px)" })
 
+  const style = {
+    hero: {
+      marginTop: rhythm(3),
+      display: `flex`,
+      flexDirection: `column`,
+      alignItems: `center`,
+      alignContent: `center`,
+      textAlign: `center`,
+    }
+  }
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Homepage" />
       <div>
-        <div
-          style={{
-            marginTop: rhythm(3),
-            display: `flex`,
-            flexDirection: `column`,
-            alignItems: `center`,
-            alignContent: `center`,
-            textAlign: `center`,
-          }}
-        >
+        <div style={style.hero} >
           <h1>Hello, my name is Arif Ikhsanudin</h1>
           <h2>I am a Fullstack Developer</h2>
         </div>

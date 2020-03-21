@@ -44,16 +44,11 @@ const ServicePage = ({ data, location }) => {
                 Jasa Pembuatan Website Fotografi
               </h3>
               <p>
-                Switching theme using button from dark to light and vice versa.
-                State of theme is done using Business Logic Components. All code
-                are tested using unit test, integration test, and driver test.
+                Occaecat deserunt sunt aute incididunt laborum. Ea pariatur
+                occaecat ullamco irure excepteur cillum elit exercitation
+                eiusmod pariatur sint veniam. Tempor do aliqua ipsum ullamco
+                officia deserunt consequat. Velit irure laborum ut aute amet.
               </p>
-              <div>
-                <span>Github</span>
-                <span>Download</span>
-                <span>Test Coverage</span>
-                <span>Workflow</span>
-              </div>
             </div>
             <div
               style={{
@@ -64,19 +59,14 @@ const ServicePage = ({ data, location }) => {
             >
               <img src="https://via.placeholder.com/400x250" alt="" />
               <h3 style={{ marginTop: rhythm(1 / 4) }}>
-                Flutter Github Action Automated Build, Test, and Upload Artifact
+                Jasa Pembuatan Website Bengkel Mobil
               </h3>
               <p>
-                Build flutter project in Github Action. Automated tests
-                including unit testing, integration testing, and driver testing.
-                Test also run on three different os. Ubuntu, windows, and Macos.
+                Occaecat eiusmod reprehenderit commodo consectetur tempor ipsum
+                ad reprehenderit. Tempor fugiat minim adipisicing est dolor.
+                Dolore aute magna duis incididunt eu duis veniam est in sit
+                nisi.
               </p>
-              <div>
-                <span>Github</span>
-                <span>Download</span>
-                <span>Test Coverage</span>
-                <span>Workflow</span>
-              </div>
             </div>
           </div>
         </div>

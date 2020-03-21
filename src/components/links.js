@@ -32,6 +32,7 @@ export default function links() {
         </AniLink>
         <AniLink paintDrip hex="#1E88E5"
           style={{
+            marginLeft: rhythm(1.5),
             boxShadow: `none`,
             textDecoration: `none`,
             color: `inherit`,

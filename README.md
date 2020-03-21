@@ -49,4 +49,4 @@ yarn prod
 - [] I18n Locale for important page
 - [] Icon import using graphql
 - [x] custom favicon with letter 'ai'
-- [] change inline style to styled react component
+- [x] change inline style to styled react component
