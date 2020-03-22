@@ -1,16 +1,11 @@
 import React from "react"
 
 import { rhythm } from "../utils/typography"
-import Links from "../components/links"
+import Layout from "./layout"
+import SEO from "../components/seo"
 
 const BlogLayout = ({ children }) => {
   const style = {
-    container: {
-      marginLeft: `auto`,
-      marginRight: `auto`,
-      maxWidth: rhythm(32),
-      padding: `${rhythm(3 / 2)} ${rhythm(3 / 4)}`,
-    },
     blog: {
       marginTop: rhythm(1),
       marginLeft: `auto`,
@@ -20,12 +15,12 @@ const BlogLayout = ({ children }) => {
     },
   }
   return (
-    <div style={style.container}>
-      <Links />
+    <Layout>
+      <SEO title="Blog tentang pemrograman ruby, javascript, android, flutter, dan lain lain" />
       <div style={style.blog}>
         <main>{children}</main>
       </div>
-    </div>
+    </Layout>
   )
 }
 

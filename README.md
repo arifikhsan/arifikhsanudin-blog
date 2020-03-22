@@ -49,10 +49,10 @@ yarn prod
 - [x] I18n Locale for important page
 - [x] custom favicon with letter 'ai'
 - [x] change inline style to styled react component
+- [x] make component on image index
+- [x] change Links to HeaderMenu
 - [] Icon import using graphql
 - [] responsive mobile for menu links
 - [] timeline for service how it works
 - [] responsive feature in service
-- [] change Links to HeaderLinks
 - [] add contact whatsapp in index
-- [x] make component on image index

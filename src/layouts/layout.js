@@ -1,5 +1,5 @@
 import React from "react"
-import Links from "../components/links"
+import HeaderMenu from "../components/header-menu"
 
 import { rhythm } from "../utils/typography"
 import { IntlProvider } from "react-intl"
@@ -21,7 +21,7 @@ const Layout = ({ locale, children }) => {
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <div style={style.container}>
-        <Links />
+        <HeaderMenu />
         <main>{children}</main>
       </div>
     </IntlProvider>

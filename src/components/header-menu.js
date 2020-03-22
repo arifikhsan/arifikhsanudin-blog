@@ -1,15 +1,19 @@
-import React from 'react'
+import React from "react"
 import { rhythm } from "../utils/typography"
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-export default function links() {
+const HeaderMenu = () => {
   return (
-    <nav style={{
-      display: `flex`,
-      justifyContent: `space-between`,
-      alignItems: `center`,
-    }}>
-      <AniLink paintDrip hex="#1E88E5"
+    <nav
+      style={{
+        display: `flex`,
+        justifyContent: `space-between`,
+        alignItems: `center`,
+      }}
+    >
+      <AniLink
+        paintDrip
+        hex="#1E88E5"
         style={{
           boxShadow: `none`,
           textDecoration: `none`,
@@ -18,9 +22,11 @@ export default function links() {
         to={`/`}
       >
         Home
-        </AniLink>
-      <div style={{ display: `flex`, justifyContent: `flex-end`, }}>
-        <AniLink paintDrip hex="#1E88E5"
+      </AniLink>
+      <div style={{ display: `flex`, justifyContent: `flex-end` }}>
+        <AniLink
+          paintDrip
+          hex="#1E88E5"
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
@@ -30,7 +36,9 @@ export default function links() {
         >
           Service
         </AniLink>
-        <AniLink paintDrip hex="#1E88E5"
+        <AniLink
+          paintDrip
+          hex="#1E88E5"
           style={{
             marginLeft: rhythm(1.5),
             boxShadow: `none`,
@@ -41,7 +49,9 @@ export default function links() {
         >
           Experiment
         </AniLink>
-        <AniLink paintDrip hex="#1E88E5"
+        <AniLink
+          paintDrip
+          hex="#1E88E5"
           style={{
             marginLeft: rhythm(1.5),
             boxShadow: `none`,
@@ -57,3 +67,4 @@ export default function links() {
   )
 }
 
+export default HeaderMenu
