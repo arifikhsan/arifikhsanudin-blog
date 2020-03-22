@@ -46,7 +46,13 @@ yarn prod
 - [x] Add Sitemap
 - [x] Move content to src
 - [x] Move google analytic code to .env.production
-- [] I18n Locale for important page
-- [] Icon import using graphql
+- [x] I18n Locale for important page
 - [x] custom favicon with letter 'ai'
 - [x] change inline style to styled react component
+- [] Icon import using graphql
+- [] responsive mobile for menu links
+- [] timeline for service how it works
+- [] responsive feature in service
+- [] change Links to HeaderLinks
+- [] add contact whatsapp in index
+- [x] make component on image index

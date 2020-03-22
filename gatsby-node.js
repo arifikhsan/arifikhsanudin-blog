@@ -1,6 +1,7 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const fs = require("fs-extra")
+const locales = require('./src/config/locales')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -64,10 +65,34 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-exports.onPostBuild = () => {
-  console.log("Copying locales")
-  fs.copySync(
-    path.join(__dirname, "/src/locales"),
-    path.join(__dirname, "/public/locales")
-  )
+// exports.onPostBuild = () => {
+//   console.log("Copying locales")
+//   fs.copySync(
+//     path.join(__dirname, "/src/locales"),
+//     path.join(__dirname, "/public/locales")
+//   )
+// }
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
+
+  return new Promise(resolve => {
+    deletePage(page)
+
+    Object.keys(locales).map(lang => {
+      const localizedPath = locales[lang].default
+        ? page.path
+        : locales[lang].path + page.path
+
+      return createPage({
+        ...page,
+        path: localizedPath,
+        context: {
+          locale: lang
+        }
+      })
+    })
+
+    resolve()
+  })
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "../components/seo"
-import Layout from "../layouts/layout"
+import ExperimentLayout from "../layouts/experiment-layout"
 import { graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import { useMediaQuery } from "react-responsive"
@@ -10,7 +10,7 @@ const ExperimentPage = ({ data, location }) => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <ExperimentLayout location={location} title={siteTitle}>
       <SEO title="Experiment" />
       <div style={{ textAlign: `center` }}>
         <div
@@ -83,7 +83,7 @@ const ExperimentPage = ({ data, location }) => {
           </div>
         </div>
       </div>
-    </Layout>
+    </ExperimentLayout>
   )
 }
 

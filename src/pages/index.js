@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "../components/seo"
-import Layout from "../layouts/layout"
+import PageLayout from "../layouts/page-layout"
 import { graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 
@@ -12,8 +12,10 @@ import android from "../assets/svg/android.svg"
 import github from "../assets/svg/github.svg"
 import gitlab from "../assets/svg/gitlab.svg"
 import { useMediaQuery } from "react-responsive"
+import { FormattedMessage } from "react-intl"
+import ImageIcon from "../components/image-icon"
 
-const IndexPage = ({ data, location }) => {
+const IndexPage = ({ data, location, pathContext: { locale } }) => {
   const siteTitle = data.site.siteMetadata.title
   const isMobile = useMediaQuery({ query: "(max-width: 425px)" })
 
@@ -25,16 +27,20 @@ const IndexPage = ({ data, location }) => {
       alignItems: `center`,
       alignContent: `center`,
       textAlign: `center`,
-    }
+    },
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <PageLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Homepage" />
       <div>
-        <div style={style.hero} >
-          <h1>Hello, my name is Arif Ikhsanudin</h1>
-          <h2>I am a Fullstack Developer</h2>
+        <div style={style.hero}>
+          <h1>
+            <FormattedMessage id="hello" />
+          </h1>
+          <h2>
+            <FormattedMessage id="whatdoido" />
+          </h2>
         </div>
         <div
           style={{
@@ -53,19 +59,11 @@ const IndexPage = ({ data, location }) => {
                 justifyContent: `center`,
               }}
             >
-              <img style={{ height: 24, margin: 4 }} src={rails} alt="rails" />
-              <img style={{ height: 24, margin: 4 }} src={vue} alt="vue" />
-              <img style={{ height: 24, margin: 4 }} src={react} alt="react" />
-              <img
-                style={{ height: 24, margin: 4 }}
-                src={flutter}
-                alt="flutter"
-              />
-              <img
-                style={{ height: 24, margin: 4 }}
-                src={android}
-                alt="android"
-              />
+              <ImageIcon name="rails" image={rails} />
+              <ImageIcon name="vue" image={vue} />
+              <ImageIcon name="react" image={react} />
+              <ImageIcon name="flutter" image={flutter} />
+              <ImageIcon name="android" image={android} />
             </div>
           </div>
           <div
@@ -76,22 +74,13 @@ const IndexPage = ({ data, location }) => {
           >
             <p>Find me on</p>
             <div style={{ display: `flex`, justifyContent: `center` }}>
-              <img
-                style={{ height: 24, margin: 4 }}
-                src={github}
-                alt="github"
-              />
-              <img
-                style={{ height: 24, margin: 4 }}
-                src={gitlab}
-                alt="gitlab"
-              />
-              {/* // TODO: Add Whatsapp Contact */}
+              <ImageIcon name="github" image={github} />
+              <ImageIcon name="gitlab" image={gitlab} />
             </div>
           </div>
         </div>
       </div>
-    </Layout>
+    </PageLayout>
   )
 }
 

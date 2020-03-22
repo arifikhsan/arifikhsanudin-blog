@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "../components/seo"
-import Layout from "../layouts/layout"
+import ServiceLayout from "../layouts/service-layout"
 import { graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import { useMediaQuery } from "react-responsive"
@@ -10,8 +10,8 @@ const ServicePage = ({ data, location }) => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="Jasa" />
+    <ServiceLayout location={location} title={siteTitle}>
+      <SEO title="Jasa pembuatan website wordpress untuk semua kategori" />
       <div style={{ textAlign: `center` }}>
         <div
           style={{
@@ -71,7 +71,7 @@ const ServicePage = ({ data, location }) => {
           </div>
         </div>
       </div>
-    </Layout>
+    </ServiceLayout>
   )
 }
 
