@@ -1,4 +1,8 @@
 {
   "hello": "Hello, my name is Arif Ikhsanudin",
-  "whatdoido": "I am a Fullstack Developer"
+  "whatdoido": "I am a Fullstack Developer",
+  "home": "Home",
+  "service": "Service",
+  "experiment": "Experiment",
+  "blog": "Blog"
 }

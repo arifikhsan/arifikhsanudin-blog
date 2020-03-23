@@ -15,7 +15,7 @@ import { useMediaQuery } from "react-responsive"
 import { FormattedMessage } from "react-intl"
 import ImageIcon from "../components/image-icon"
 
-const IndexPage = ({ data, location, pathContext: { locale } }) => {
+const IndexPage = ({ data, location, pageContext: { locale } }) => {
   const siteTitle = data.site.siteMetadata.title
   const isMobile = useMediaQuery({ query: "(max-width: 425px)" })
 

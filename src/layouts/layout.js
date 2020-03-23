@@ -7,6 +7,8 @@ import { IntlProvider } from "react-intl"
 import id from "../locales/id/index.json"
 import en from "../locales/en/index.json"
 
+import '../styles/main.scss'
+
 const messages = { id, en }
 
 const Layout = ({ locale, children }) => {

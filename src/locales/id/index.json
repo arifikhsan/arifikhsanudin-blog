@@ -1,4 +1,8 @@
 {
   "hello": "Hai, nama saya Arif Ikhsanudin",
-  "whatdoido": "Saya adalah Fullstack Developer"
+  "whatdoido": "Saya adalah Fullstack Developer",
+  "home": "Beranda",
+  "service": "Jasa Web",
+  "experiment": "Experimen",
+  "blog": "Blog"
 }

@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "./layout"
 
-const ServiceLayout = ({ children }) => {
+const ServiceLayout = ({ children, ...props }) => {
   return (
-    <Layout>
+    <Layout {...props}>
       <main>{children}</main>
     </Layout>
   )

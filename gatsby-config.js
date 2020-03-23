@@ -85,7 +85,7 @@ module.exports = {
         short_name: `ArifIkhsanudinBlog`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#1E88E5`, 
+        theme_color: `#1E88E5`,
         display: `minimal-ui`,
         icon: `src/assets/ai.png`,
       },
@@ -103,5 +103,11 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ["node_modules/hamburgers"]
+      }
+    }
   ],
 }
