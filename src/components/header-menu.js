@@ -44,20 +44,7 @@ const HeaderMenu = () => {
           <FormattedMessage id="blog" />
         </LocalizedAniLink>
       </div>
-      {isMobile && (
-        <button
-          style={{ display: `flex`, justifyContent: `flex-end` }}
-          className={
-            `hamburger hamburger--collapse` + (isActive && " is-active")
-          }
-          type="button"
-          onClick={() => setIsActive(!isActive)}
-        >
-          <span className="hamburger-box">
-            <span className="hamburger-inner"></span>
-          </span>
-        </button>
-      )}
+      {isMobile && <p>Menu</p>}
     </nav>
   )
 }
