@@ -59,6 +59,7 @@ yarn prod
 - [] certificate image shadow
 - [] certificate image add shadow in hover
 - [] integrate styled jsx
+- [] image click zoom
 
 ## Gatsby search image
 
