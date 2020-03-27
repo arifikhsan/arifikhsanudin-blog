@@ -1,11 +1,12 @@
 {
   "hello": "Hello, my name is Arif Ikhsanudin",
-  "whatdoido": "I am a Fullstack Developer",
+  "whatdoido": "I am a Student and Fullstack Developer",
   "home": "Home",
   "service": "Service",
   "experiment": "Experiment",
   "certificate": "Certificate",
   "showcase": "Showcase",
   "latest-blog": "Latest Blog",
+  "notfound": "Page not found",
   "blog": "Blog"
 }

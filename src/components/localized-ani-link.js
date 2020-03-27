@@ -7,7 +7,7 @@ import { FormattedMessage } from "react-intl"
 
 const LocalizedAniLink = ({
   to,
-  name,
+  title,
   intl: { locale },
   children,
   style,
@@ -27,7 +27,7 @@ const LocalizedAniLink = ({
       to={path}
       {...props}
     >
-      <FormattedMessage id={name} />
+      <FormattedMessage id={title} />
     </AniLink>
   )
 }

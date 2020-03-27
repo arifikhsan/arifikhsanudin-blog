@@ -20,14 +20,24 @@ const HeaderMenu = () => {
   }
   return (
     <nav style={style.nav}>
-      <LocalizedAniLink to="/" name="home" />
+      <LocalizedAniLink to="/" title="home" />
       <div style={style.linkGroups}>
         <LocalizedAniLink
-          to="/experiment"
-          name="experiment"
+          to="/showcase"
+          title="showcase"
           style={style.marginLeft}
         />
-        <LocalizedAniLink to="/blog" name="blog" style={style.marginLeft} />
+        <LocalizedAniLink
+          to="/experiment"
+          title="experiment"
+          style={style.marginLeft}
+        />
+        <LocalizedAniLink
+          to="/certificate"
+          title="certificate"
+          style={style.marginLeft}
+        />
+        <LocalizedAniLink to="/blog" title="blog" style={style.marginLeft} />
       </div>
     </nav>
   )
