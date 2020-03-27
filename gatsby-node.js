@@ -1,6 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const fs = require("fs-extra")
+// const fs = require("fs-extra")
 const locales = require('./src/config/locales')
 
 exports.createPages = async ({ graphql, actions }) => {

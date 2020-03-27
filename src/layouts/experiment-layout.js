@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "./layout"
 
-const ExperimentLayout = ({ children }) => {
+const ExperimentLayout = ({ children, ...props }) => {
   return (
-    <Layout>
+    <Layout {...props}>
       <main>{children}</main>
     </Layout>
   )

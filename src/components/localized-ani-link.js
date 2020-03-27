@@ -3,16 +3,17 @@ import { injectIntl } from "react-intl"
 
 import locales from "../config/locales"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { FormattedMessage } from "react-intl"
 
 const LocalizedAniLink = ({
   to,
+  name,
   intl: { locale },
   children,
   style,
   ...props
 }) => {
   const path = locales[locale].default ? to : `/${locale}${to}`
-
   return (
     <AniLink
       paintDrip
@@ -26,7 +27,7 @@ const LocalizedAniLink = ({
       to={path}
       {...props}
     >
-      {children}
+      <FormattedMessage id={name} />
     </AniLink>
   )
 }

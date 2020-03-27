@@ -5,15 +5,18 @@ import BlogLayout from "../layouts/blog-layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import titleize from "titleize"
+import { FormattedMessage } from "react-intl"
 
-const BlogIndex = ({ data, location }) => {
+const BlogIndex = ({ data, location, pageContext: { locale } }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <BlogLayout location={location} title={siteTitle}>
+    <BlogLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="All posts" />
-      <h2 style={{ textAlign: `center` }}>Blog Terbaru</h2>
+      <h2 style={{ textAlign: `center` }}>
+        <FormattedMessage id="latest-blog" />
+      </h2>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -57,7 +60,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 10
-      filter: { fileAbsolutePath: { regex: "\/blogs/" } }
+      filter: { fileAbsolutePath: { regex: "/blogs/" } }
     ) {
       edges {
         node {

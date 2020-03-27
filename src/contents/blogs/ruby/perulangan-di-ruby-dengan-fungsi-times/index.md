@@ -22,7 +22,7 @@ end
 
 Kode diatas akan menampilkan *'hello'* sebanyak 5 kali seperti ini.
 
-```
+```text
 
 "hello"
 "hello"
@@ -46,7 +46,7 @@ end
 
 Maka akan menghasilkan tampilan seperti ini.
 
-```
+```text
 
 "nomor 0"
 "nomor 1"

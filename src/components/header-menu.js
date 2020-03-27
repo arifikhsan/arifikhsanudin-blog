@@ -1,10 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 import { rhythm } from "../utils/typography"
 import LocalizedAniLink from "./localized-ani-link"
-import { FormattedMessage } from "react-intl"
 
 const HeaderMenu = () => {
-  console.log(isMobile)
   const style = {
     nav: {
       display: `flex`,
@@ -15,10 +13,6 @@ const HeaderMenu = () => {
       display: `flex`,
       justifyContent: `flex-end`,
       alignItems: `center`,
-      visibility: isMobile ? `hidden` : `visible`,
-    },
-    hamburger: {
-      visibility: isMobile ? `visible` : `hidden`,
     },
     marginLeft: {
       marginLeft: rhythm(1.5),
@@ -26,16 +20,14 @@ const HeaderMenu = () => {
   }
   return (
     <nav style={style.nav}>
-      <LocalizedAniLink to="/">
-        <FormattedMessage id="home" />
-      </LocalizedAniLink>
+      <LocalizedAniLink to="/" name="home" />
       <div style={style.linkGroups}>
-        <LocalizedAniLink to="/experiment" style={style.marginLeft}>
-          <FormattedMessage id="experiment" />
-        </LocalizedAniLink>
-        <LocalizedAniLink to="/blog" style={style.marginLeft}>
-          <FormattedMessage id="blog" />
-        </LocalizedAniLink>
+        <LocalizedAniLink
+          to="/experiment"
+          name="experiment"
+          style={style.marginLeft}
+        />
+        <LocalizedAniLink to="/blog" name="blog" style={style.marginLeft} />
       </div>
     </nav>
   )

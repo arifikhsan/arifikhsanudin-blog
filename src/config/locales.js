@@ -1,11 +1,11 @@
 module.exports = {
-  id: {
-    path: 'id',
-    locale: 'Indonesia',
+  en: {
+    path: "en",
+    locale: "English",
     default: true,
   },
-  en: {
-    path: 'en',
-    locale: 'English',
+  id: {
+    path: "id",
+    locale: "Indonesia",
   },
 }

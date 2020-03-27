@@ -4,8 +4,8 @@ import HeaderMenu from "../components/header-menu"
 import { rhythm } from "../utils/typography"
 import { IntlProvider } from "react-intl"
 
-import id from "../locales/id/index.json"
-import en from "../locales/en/index.json"
+import id from "../locales/id.json"
+import en from "../locales/en.json"
 
 import '../styles/main.scss'
 

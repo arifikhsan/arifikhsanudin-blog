@@ -5,12 +5,12 @@ import { graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import { useMediaQuery } from "react-responsive"
 
-const ExperimentPage = ({ data, location }) => {
+const ExperimentPage = ({ data, location, pageContext: { locale } }) => {
   const siteTitle = data.site.siteMetadata.title
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
 
   return (
-    <ExperimentLayout location={location} title={siteTitle}>
+    <ExperimentLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Experiment" />
       <div style={{ textAlign: `center` }}>
         <div

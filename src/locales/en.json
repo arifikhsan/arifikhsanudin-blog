@@ -4,5 +4,8 @@
   "home": "Home",
   "service": "Service",
   "experiment": "Experiment",
+  "certificate": "Certificate",
+  "showcase": "Showcase",
+  "latest-blog": "Latest Blog",
   "blog": "Blog"
 }

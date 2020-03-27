@@ -4,7 +4,7 @@ import { rhythm } from "../utils/typography"
 import Layout from "./layout"
 import SEO from "../components/seo"
 
-const BlogLayout = ({ children }) => {
+const BlogLayout = ({ children, ...props }) => {
   const style = {
     blog: {
       marginTop: rhythm(1),
@@ -15,7 +15,7 @@ const BlogLayout = ({ children }) => {
     },
   }
   return (
-    <Layout>
+    <Layout {...props}>
       <SEO title="Blog tentang pemrograman ruby, javascript, android, flutter, dan lain lain" />
       <div style={style.blog}>
         <main>{children}</main>
