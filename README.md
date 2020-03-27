@@ -56,6 +56,9 @@ yarn prod
 - [] timeline for service how it works
 - [] responsive feature in service
 - [] add contact whatsapp in index
+- [] certificate image shadow
+- [] certificate image add shadow in hover
+- [] integrate styled jsx
 
 ## Gatsby search image
 
