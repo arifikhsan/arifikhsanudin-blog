@@ -80,63 +80,6 @@ const ExperimentPage = ({ data, location, pageContext: { locale } }) => {
             </div>
           </div>
         </div>
-        <div>
-          <h2>GatsbyJS</h2>
-          <div
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-            }}
-          >
-            <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1.5),
-                padding: rhythm(1),
-              }}
-            >
-              <img src="https://via.placeholder.com/400x250" alt="" />
-              <h3 style={{ marginTop: rhythm(1 / 4) }}>Webkita</h3>
-              <p>
-                Sint excepteur nostrud aliqua veniam tempor commodo
-                reprehenderit qui culpa ex. In eiusmod proident elit est
-                voluptate est dolor duis labore. Deserunt ad nisi nulla
-                incididunt labore amet anim est quis. Minim nostrud minim
-                exercitation nostrud irure esse adipisicing pariatur labore
-                aliquip labore ex occaecat cupidatat.
-              </p>
-              <div>
-                <span>Go to page</span>
-                <span>Test Coverage</span>
-                <span>Workflow</span>
-              </div>
-            </div>
-            <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1.5),
-                padding: rhythm(1),
-              }}
-            >
-              <img src="https://via.placeholder.com/400x250" alt="" />
-              <h3 style={{ marginTop: rhythm(1 / 4) }}>
-                Arif Ikhsanudin (This) Website
-              </h3>
-              <p>
-                Duis voluptate quis sunt qui commodo in. Sint magna dolore anim
-                mollit mollit ad nostrud enim. Est eiusmod excepteur mollit
-                labore officia mollit in ad esse magna nisi incididunt nulla.
-                Nulla eu nisi ex nulla proident eu qui irure veniam ipsum
-                officia. Sit consequat commodo do incididunt sint esse ad tempor
-                qui ea occaecat ullamco sit commodo.
-              </p>
-              <div>
-                <span>Test Coverage</span>
-                <span>Workflow</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </ExperimentLayout>
   )

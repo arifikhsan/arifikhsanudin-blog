@@ -56,3 +56,29 @@ yarn prod
 - [] timeline for service how it works
 - [] responsive feature in service
 - [] add contact whatsapp in index
+
+## Gatsby search image
+
+```js
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    skillAcademySeo: file(
+      sourceInstanceName: { eq: "asset" }
+      extension: { eq: "jpg" }
+      relativePath: { eq: "certificates/skill-academy-seo.jpg" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+```

@@ -47,7 +47,7 @@ const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
               </p>
               <div>
                 <span>
-                  <a href="https://webkita.now.sh" target="_blank">Go to page</a>
+                  <a href="https://webkita.now.sh" target="_blank" rel="noopener noreferrer">Go to page</a>
                 </span>
               </div>
             </div>

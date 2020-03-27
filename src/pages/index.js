@@ -74,8 +74,12 @@ const IndexPage = ({ data, location, pageContext: { locale } }) => {
           >
             <p>Find me on</p>
             <div style={{ display: `flex`, justifyContent: `center` }}>
-              <ImageIcon name="github" image={github} />
-              <ImageIcon name="gitlab" image={gitlab} />
+              <a href="https://www.github.com/arifkhsan">
+                <ImageIcon name="github" image={github} />
+              </a>
+              <a href="https://www.gitlab.com/arifkhsan">
+                <ImageIcon name="gitlab" image={gitlab} />
+              </a>
             </div>
           </div>
         </div>
