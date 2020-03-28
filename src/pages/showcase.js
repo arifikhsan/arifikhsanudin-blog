@@ -68,7 +68,14 @@ const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
                 padding: rhythm(1),
               }}
             >
-              <Img fluid={thisWebsite} />
+              <Img
+
+                fluid={thisWebsite}
+                style={{
+                  boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
+                  borderRadius: `0.5rem`,
+                }}
+              />
               <h3>Arif Ikhsanudin (This) Website</h3>
               <p>
                 Simple website for myself. This website is made to represent the

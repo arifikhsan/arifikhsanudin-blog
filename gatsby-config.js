@@ -66,6 +66,7 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-images-zoom`,
         ],
       },
     },
@@ -167,6 +168,7 @@ module.exports = {
       options: {
         includePaths: ["node_modules/hamburgers"]
       }
-    }
+    },
+    `gatsby-plugin-styled-jsx`
   ],
 }

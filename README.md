@@ -54,11 +54,11 @@ yarn prod
 - [z] Icon import using graphql
 - [z] timeline for service how it works
 - [z] responsive feature in service
-- [] responsive mobile for menu links
-- [] add contact whatsapp in index
-- [] certificate image shadow
+- [x] responsive mobile for menu links
+- [x] add contact whatsapp in index
+- [x] integrate styled jsx
+- [x] certificate image shadow
 - [] certificate image add shadow in hover
-- [] integrate styled jsx
 - [] image click zoom
 - [] image carousel
 

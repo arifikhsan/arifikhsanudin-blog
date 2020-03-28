@@ -11,6 +11,7 @@ import flutter from "../assets/svg/flutter.svg"
 import android from "../assets/svg/android.svg"
 import github from "../assets/svg/github.svg"
 import gitlab from "../assets/svg/gitlab.svg"
+import whatsapp from "../assets/svg/whatsapp.svg"
 import { useMediaQuery } from "react-responsive"
 import { FormattedMessage } from "react-intl"
 import ImageIcon from "../components/image-icon"
@@ -80,6 +81,14 @@ const IndexPage = ({ data, location, pageContext: { locale } }) => {
               <a href="https://www.gitlab.com/arifkhsan">
                 <ImageIcon name="gitlab" image={gitlab} />
               </a>
+              <a href="https://api.whatsapp.com/send?phone=6289516784488">
+                <ImageIcon name="whatsapp" image={whatsapp} />
+              </a>
+              <style jsx>{`
+                a {
+                  box-shadow: none;
+                }
+              `}</style>
             </div>
           </div>
         </div>

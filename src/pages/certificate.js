@@ -42,7 +42,13 @@ const CertificatePage = ({ data, location, pageContext: { locale } }) => {
                 padding: rhythm(1),
               }}
             >
-              <Img fluid={seo} />
+              <Img
+                fluid={seo}
+                style={{
+                  boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
+                  borderRadius: `0.5rem`,
+                }}
+              />
               <h3>SEO Course in Skill Academy</h3>
               <p>
                 I learned about the SEO mindset, how to research keywords in
