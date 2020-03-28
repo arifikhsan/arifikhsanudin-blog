@@ -1,7 +1,7 @@
 import React from "react"
 import { injectIntl } from "react-intl"
 
-import locales from "../config/locales"
+import locales from "../../config/locales"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { FormattedMessage } from "react-intl"
 

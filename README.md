@@ -51,10 +51,10 @@ yarn prod
 - [x] change inline style to styled react component
 - [x] make component on image index
 - [x] change Links to HeaderMenu
-- [] Icon import using graphql
+- [z] Icon import using graphql
+- [z] timeline for service how it works
+- [z] responsive feature in service
 - [] responsive mobile for menu links
-- [] timeline for service how it works
-- [] responsive feature in service
 - [] add contact whatsapp in index
 - [] certificate image shadow
 - [] certificate image add shadow in hover

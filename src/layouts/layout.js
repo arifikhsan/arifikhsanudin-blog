@@ -1,5 +1,4 @@
 import React from "react"
-import HeaderMenu from "../components/header-menu"
 
 import { rhythm } from "../utils/typography"
 import { IntlProvider } from "react-intl"
@@ -8,6 +7,7 @@ import id from "../locales/id.json"
 import en from "../locales/en.json"
 
 import '../styles/main.scss'
+import HeaderMenu from "./components/header-menu"
 
 const messages = { id, en }
 
