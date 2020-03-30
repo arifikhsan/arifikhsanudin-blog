@@ -18,7 +18,7 @@ Berikut ini adalah kode lengkapnya.
 
 ```yml
 
-name: Second test
+name: Build and Test
 on: [push]
 jobs:
   test:
@@ -48,7 +48,7 @@ jobs:
 
 ```yaml
 
-name: Second test
+name: Build and Test
 
 ```
 
