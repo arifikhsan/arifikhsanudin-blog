@@ -35,7 +35,7 @@ const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
               flexWrap: `wrap`,
             }}
           >
-            <div
+            {/* <div
               style={{
                 width: isTabletOrMobile ? `100%` : `50%`,
                 marginTop: rhythm(1.5),
@@ -60,7 +60,8 @@ const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
                   </a>
                 </span>
               </div>
-            </div>
+            </div> */}
+
             <div
               style={{
                 width: isTabletOrMobile ? `100%` : `50%`,
@@ -69,7 +70,6 @@ const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
               }}
             >
               <Img
-
                 fluid={thisWebsite}
                 style={{
                   boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
@@ -92,14 +92,6 @@ const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
                 <Link to="/" style={{ boxShadow: `none` }}>
                   Go to Homepage
                 </Link>
-                <a
-                  href="https://github.com/arifikhsan/arifikhsanudin-blog"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ boxShadow: `none` }}
-                >
-                  Code
-                </a>
               </div>
             </div>
           </div>

@@ -4,6 +4,9 @@ import ExperimentLayout from "../layouts/experiment-layout"
 import { graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import { useMediaQuery } from "react-responsive"
+import GithubLink from "../components/links/github-link"
+import GithubActionsLink from "../components/links/github-actions-link"
+import { FormattedMessage } from "react-intl"
 
 const ExperimentPage = ({ data, location, pageContext: { locale } }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -22,60 +25,118 @@ const ExperimentPage = ({ data, location, pageContext: { locale } }) => {
             alignContent: `center`,
           }}
         >
-          <h1>Experiment</h1>
+          <h1>
+            <FormattedMessage id="experiment" />
+          </h1>
+          <p>
+            Trying about different things. Please dont mind at github commit
+            message, because only me who works in this project. This experiment
+            does not have to be successful.
+          </p>
         </div>
         <div>
           <h2>Flutter</h2>
           <div
             style={{
               display: `flex`,
+              justifyContent: `center`,
               flexWrap: `wrap`,
             }}
           >
             <div
               style={{
                 width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1.5),
-                padding: rhythm(1),
+                marginTop: rhythm(1),
+                padding: rhythm(0.5),
               }}
             >
-              <img src="https://via.placeholder.com/400x250" alt="" />
-              <h3 style={{ marginTop: rhythm(1 / 4) }}>
-                Dark Theme Switch using BLoC
-              </h3>
-              <p>
-                Switching theme using button from dark to light and vice versa.
-                State of theme is done using Business Logic Components. All code
-                are tested using unit test, integration test, and driver test.
-              </p>
-              <div>
-                <span>Github</span>
-                <span>Download</span>
-                <span>Test Coverage</span>
-                <span>Workflow</span>
+              <div
+                style={{
+                  padding: rhythm(1),
+                  boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
+                  borderRadius: `0.5rem`,
+                }}
+              >
+                <h3 style={{ marginTop: rhythm(0) }}>
+                  Dark Theme Switch using BLoC
+                </h3>
+                <p>
+                  Switching theme using button from dark to light and vice
+                  versa. State of theme is done using Business Logic Components.
+                  All code are tested using unit test, integration test, and
+                  driver test.
+                </p>
+                <div
+                  style={{
+                    display: `flex`,
+                    justifyContent: `space-evenly`,
+                  }}
+                >
+                  <GithubLink repo="flutter_theme_bloc" />
+                  <GithubActionsLink repo="flutter_theme_bloc" />
+                </div>
               </div>
             </div>
             <div
               style={{
                 width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1.5),
-                padding: rhythm(1),
+                marginTop: rhythm(1),
+                padding: rhythm(0.5),
               }}
             >
-              <img src="https://via.placeholder.com/400x250" alt="" />
-              <h3 style={{ marginTop: rhythm(1 / 4) }}>
-                Flutter Github Action Automated Build, Test, and Upload Artifact
-              </h3>
-              <p>
-                Build flutter project in Github Action. Automated tests
-                including unit testing, integration testing, and driver testing.
-                Test also run on three different os. Ubuntu, windows, and Macos.
-              </p>
-              <div>
-                <span>Github</span>
-                <span>Download</span>
-                <span>Test Coverage</span>
-                <span>Workflow</span>
+              <div
+                style={{
+                  padding: rhythm(1),
+                  boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
+                  borderRadius: `0.5rem`,
+                }}
+              >
+                <h3 style={{ marginTop: 0 }}>
+                  Flutter Github Action Automated Build, Test, and Upload
+                  Artifact
+                </h3>
+                <p>
+                  Build flutter project in Github Action. Automated tests
+                  including unit testing, integration testing, and driver
+                  testing. Test also run on three different os. Ubuntu, windows,
+                  and Macos.
+                </p>
+                <div
+                  style={{
+                    display: `flex`,
+                    justifyContent: `space-evenly`,
+                  }}
+                >
+                  <GithubLink repo="flutter_github_actions" />
+                  <GithubActionsLink repo="flutter_github_actions" />
+                </div>
+              </div>
+            </div>
+            <div
+              style={{
+                width: isTabletOrMobile ? `100%` : `50%`,
+                marginTop: rhythm(1),
+                padding: rhythm(0.5),
+              }}
+            >
+              <div
+                style={{
+                  padding: rhythm(1),
+                  boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
+                  borderRadius: `0.5rem`,
+                }}
+              >
+                <h3 style={{ marginTop: 0 }}>Flutter Components</h3>
+                <p>A small project built for trying many flutter widgets.</p>
+                <div
+                  style={{
+                    display: `flex`,
+                    justifyContent: `space-evenly`,
+                  }}
+                >
+                  <GithubLink repo="flutter_components" />
+                  <GithubActionsLink repo="flutter_components" />
+                </div>
               </div>
             </div>
           </div>
