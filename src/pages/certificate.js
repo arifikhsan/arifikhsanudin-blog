@@ -9,8 +9,8 @@ import Img from "gatsby-image"
 const CertificatePage = ({ data, location, pageContext: { locale } }) => {
   const siteTitle = data.site.siteMetadata.title
   const seo = data.skillAcademySeo.childImageSharp.fluid
+  const azure = data.azure.childImageSharp.fluid
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
-
   return (
     <PageLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Certificate" />
@@ -25,6 +25,37 @@ const CertificatePage = ({ data, location, pageContext: { locale } }) => {
           }}
         >
           <h1>Certificate</h1>
+        </div>
+        <div>
+          <h2>Coding</h2>
+          <div
+            style={{
+              display: `flex`,
+              justifyContent: `center`,
+              flexWrap: `wrap`,
+            }}
+          >
+            <div
+              style={{
+                width: isTabletOrMobile ? `100%` : `50%`,
+                marginTop: rhythm(1.5),
+                padding: rhythm(1),
+              }}
+            >
+              <Img
+                fluid={azure}
+                style={{
+                  boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
+                  borderRadius: `0.5rem`,
+                }}
+              />
+              <h3>Basic Azure Cloud</h3>
+              <p>
+                I learned about using Azure services. Including repositories,
+                database, web server, and deploy code.
+              </p>
+            </div>
+          </div>
         </div>
         <div>
           <h2>Others</h2>
@@ -83,5 +114,33 @@ export const pageQuery = graphql`
         }
       }
     }
+    azure: file(
+      sourceInstanceName: { eq: "asset" }
+      extension: { eq: "jpg" }
+      relativePath: { eq: "certificates/azure.jpg" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    # allFile(
+    #   filter: {
+    #     sourceInstanceName: { eq: "asset" }
+    #     extension: { in: ["jpg", "png"] }
+    #     relativeDirectory: { eq: "certificates" }
+    #   }
+    # ) {
+    #   edges {
+    #     node {
+    #       childImageSharp {
+    #         fluid {
+    #           ...GatsbyImageSharpFluid
+    #         }
+    #       }
+    #     }
+    #   }
+    # }
   }
 `
