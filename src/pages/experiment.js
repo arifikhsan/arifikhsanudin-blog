@@ -139,6 +139,36 @@ const ExperimentPage = ({ data, location, pageContext: { locale } }) => {
                 </div>
               </div>
             </div>
+            <div
+              style={{
+                width: isTabletOrMobile ? `100%` : `50%`,
+                marginTop: rhythm(1),
+                padding: rhythm(0.5),
+              }}
+            >
+              <div
+                style={{
+                  padding: rhythm(1),
+                  boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
+                  borderRadius: `0.5rem`,
+                }}
+              >
+                <h3 style={{ marginTop: 0 }}>Flutter Number Trivia</h3>
+                <p>
+                  Get a meaning from a number. This made by following TDD
+                  tutorial from Reso Coder. But i change the code a little bit.
+                </p>
+                <div
+                  style={{
+                    display: `flex`,
+                    justifyContent: `space-evenly`,
+                  }}
+                >
+                  <GithubLink repo="flutter_number_trivia_season_2" />
+                  <GithubActionsLink repo="flutter_number_trivia_season_2" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
