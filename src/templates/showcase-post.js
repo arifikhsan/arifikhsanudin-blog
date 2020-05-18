@@ -5,9 +5,9 @@ import Bio from "../components/bio"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import titleize from "titleize"
-import BlogLayout from "../layouts/blog-layout"
+import ShowcaseLayout from "../layouts/showcase-layout"
 
-class BlogPostTemplate extends React.Component {
+class ShowcasePostTemplate extends React.Component {
   render() {
     const { data, pageContext, location } = this.props
     const post = data.markdownRemark
@@ -15,7 +15,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = pageContext
 
     return (
-      <BlogLayout location={location} title={siteTitle}>
+      <ShowcaseLayout location={location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -108,14 +108,14 @@ class BlogPostTemplate extends React.Component {
             </li>
           </ul>
         </nav>
-      </BlogLayout>
+      </ShowcaseLayout>
     )
   }
 }
-export default BlogPostTemplate
+export default ShowcasePostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query ShowcasePostBySlug($slug: String!) {
     site {
       siteMetadata {
         title

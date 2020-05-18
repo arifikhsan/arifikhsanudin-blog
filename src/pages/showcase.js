@@ -9,7 +9,7 @@ import Img from "gatsby-image"
 const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
   const siteTitle = data.site.siteMetadata.title
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
-  const thisWebsite = data.thisWebsite.childImageSharp.fluid
+  const showcases = data.allMarkdownRemark.edges
 
   return (
     <PageLayout location={location} title={siteTitle} locale={locale}>
@@ -35,65 +35,65 @@ const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
               flexWrap: `wrap`,
             }}
           >
-            {/* <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1.5),
-                padding: rhythm(1),
-              }}
-            >
-              <img src="https://via.placeholder.com/400x250" alt="" />
-              <h3>Webkita</h3>
-              <p>
-                Webkita is a website for providing website creation services.
-                made with GatsbyJS and TailwindCSS. SEO optimized.
-              </p>
-              <div>
-                <span>
-                  <a
-                    href="https://webkita.now.sh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ boxShadow: `none` }}
-                  >
-                    Go to page
-                  </a>
-                </span>
-              </div>
-            </div> */}
+            {showcases
+              .filter(({ node }) => node.frontmatter.category === "gatsby")
+              .map(({ node }) => {
+                const title = node.frontmatter.title
+                const image =
+                  node.frontmatter.featuredImage.childImageSharp.fluid
 
-            <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1.5),
-                padding: rhythm(1),
-              }}
-            >
-              <Img
-                fluid={thisWebsite}
-                style={{
-                  boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
-                  borderRadius: `0.5rem`,
-                }}
-              />
-              <h3>Arif Ikhsanudin (This) Website</h3>
-              <p>
-                Simple website for myself. This website is made to represent the
-                results of my work. There are certificate pages, showcases,
-                experiments, and blogs. A blog is written with a markdown file,
-                called with graphql, and displayed with html.
-              </p>
-              <div
-                style={{
-                  display: `flex`,
-                  justifyContent: `space-evenly`,
-                }}
-              >
-                <Link to="/" style={{ boxShadow: `none` }}>
-                  Go to Homepage
-                </Link>
-              </div>
-            </div>
+                return (
+                  <div
+                    key={node.fields.slug}
+                    style={{
+                      width: isTabletOrMobile ? `100%` : `50%`,
+                      marginTop: rhythm(1.5),
+                      padding: rhythm(1),
+                    }}
+                  >
+                    <Img
+                      fluid={image}
+                      style={{
+                        boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
+                        borderRadius: `0.5rem`,
+                        height: `16rem`,
+                      }}
+                    />
+                    <h3>{title}</h3>
+                    <p>{node.frontmatter.description}</p>
+                    {node.frontmatter.links &&
+                      node.frontmatter.links.map(link => {
+                        return (
+                          <div
+                            key={link.title}
+                            style={{
+                              display: `flex`,
+                              justifyContent: `space-evenly`,
+                            }}
+                          >
+                            {link.internal ? (
+                              <Link
+                                to={link.link}
+                                style={{ boxShadow: `none` }}
+                              >
+                                {link.title}
+                              </Link>
+                            ) : (
+                              <a
+                                href={link.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ boxShadow: `none` }}
+                              >
+                                {link.title}
+                              </a>
+                            )}
+                          </div>
+                        )
+                      })}
+                  </div>
+                )
+              })}
           </div>
         </div>
       </div>
@@ -110,14 +110,33 @@ export const pageQuery = graphql`
         title
       }
     }
-    thisWebsite: file(
-      sourceInstanceName: { eq: "asset" }
-      extension: { eq: "png" }
-      relativePath: { eq: "showcases/arif-ikhsanudin-blog.png" }
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 10
+      filter: { fileAbsolutePath: { regex: "/showcases/" } }
     ) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "DD MMMM YYYY")
+            title
+            description
+            category
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            links {
+              title
+              link
+            }
+          }
         }
       }
     }

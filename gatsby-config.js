@@ -48,6 +48,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/contents/showcases`,
+        name: `showcase`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -166,9 +173,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        includePaths: ["node_modules/hamburgers"]
-      }
+        includePaths: ["node_modules/hamburgers"],
+      },
     },
-    `gatsby-plugin-styled-jsx`
+    `gatsby-plugin-styled-jsx`,
   ],
 }

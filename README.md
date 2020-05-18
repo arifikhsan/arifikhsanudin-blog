@@ -87,3 +87,8 @@ export const pageQuery = graphql`
 `
 
 ```
+
+## font family
+
+title: montserrat
+body: merrinweather
