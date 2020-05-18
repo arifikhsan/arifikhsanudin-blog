@@ -6,10 +6,81 @@ import { rhythm } from "../utils/typography"
 import { useMediaQuery } from "react-responsive"
 import Img from "gatsby-image"
 
-const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
-  const siteTitle = data.site.siteMetadata.title
+const GatsbySection = ({ data }) => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
   const showcases = data.allMarkdownRemark.edges
+  return (
+    <div>
+      <h2>ReactJS + GatsbyJS</h2>
+      <div
+        style={{
+          display: `flex`,
+          justifyContent: `center`,
+          flexWrap: `wrap`,
+        }}
+      >
+        {showcases
+          .filter(({ node }) => node.frontmatter.category === "gatsby")
+          .map(({ node }) => {
+            const title = node.frontmatter.title
+            const image = node.frontmatter.featuredImage.childImageSharp.fluid
+
+            return (
+              <div
+                key={node.fields.slug}
+                style={{
+                  width: isTabletOrMobile ? `100%` : `50%`,
+                  marginTop: rhythm(1.5),
+                  padding: rhythm(1),
+                }}
+              >
+                <Img
+                  fluid={image}
+                  style={{
+                    boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
+                    borderRadius: `0.5rem`,
+                    height: `16rem`,
+                  }}
+                />
+                <h3>{title}</h3>
+                <p>{node.frontmatter.description}</p>
+                {node.frontmatter.links &&
+                  node.frontmatter.links.map(link => {
+                    return (
+                      <div
+                        key={link.title}
+                        style={{
+                          display: `flex`,
+                          justifyContent: `space-evenly`,
+                        }}
+                      >
+                        {link.internal ? (
+                          <Link to={link.link} style={{ boxShadow: `none` }}>
+                            {link.title}
+                          </Link>
+                        ) : (
+                          <a
+                            href={link.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ boxShadow: `none` }}
+                          >
+                            {link.title}
+                          </a>
+                        )}
+                      </div>
+                    )
+                  })}
+              </div>
+            )
+          })}
+      </div>
+    </div>
+  )
+}
+
+const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
+  const siteTitle = data.site.siteMetadata.title
 
   return (
     <PageLayout location={location} title={siteTitle} locale={locale}>
@@ -26,76 +97,7 @@ const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
         >
           <h1>Showcase</h1>
         </div>
-        <div>
-          <h2>ReactJS + GatsbyJS</h2>
-          <div
-            style={{
-              display: `flex`,
-              justifyContent: `center`,
-              flexWrap: `wrap`,
-            }}
-          >
-            {showcases
-              .filter(({ node }) => node.frontmatter.category === "gatsby")
-              .map(({ node }) => {
-                const title = node.frontmatter.title
-                const image =
-                  node.frontmatter.featuredImage.childImageSharp.fluid
-
-                return (
-                  <div
-                    key={node.fields.slug}
-                    style={{
-                      width: isTabletOrMobile ? `100%` : `50%`,
-                      marginTop: rhythm(1.5),
-                      padding: rhythm(1),
-                    }}
-                  >
-                    <Img
-                      fluid={image}
-                      style={{
-                        boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
-                        borderRadius: `0.5rem`,
-                        height: `16rem`,
-                      }}
-                    />
-                    <h3>{title}</h3>
-                    <p>{node.frontmatter.description}</p>
-                    {node.frontmatter.links &&
-                      node.frontmatter.links.map(link => {
-                        return (
-                          <div
-                            key={link.title}
-                            style={{
-                              display: `flex`,
-                              justifyContent: `space-evenly`,
-                            }}
-                          >
-                            {link.internal ? (
-                              <Link
-                                to={link.link}
-                                style={{ boxShadow: `none` }}
-                              >
-                                {link.title}
-                              </Link>
-                            ) : (
-                              <a
-                                href={link.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{ boxShadow: `none` }}
-                              >
-                                {link.title}
-                              </a>
-                            )}
-                          </div>
-                        )
-                      })}
-                  </div>
-                )
-              })}
-          </div>
-        </div>
+        <GatsbySection data={data} />
       </div>
     </PageLayout>
   )
