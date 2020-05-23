@@ -1,8 +1,8 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-// const fs = require("fs-extra")
 const locales = require("./src/config/locales")
 
+// * blog
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -52,7 +52,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 }
 
-// showcase
+// * showcase
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -83,7 +83,7 @@ exports.createPages = async ({ graphql, actions }) => {
     throw result.errors
   }
 
-  // Create services pages.
+  // Create showcase pages.
   const showcases = result.data.allMarkdownRemark.edges
 
   showcases.forEach((post, index) => {

@@ -29,9 +29,8 @@ const ExperimentPage = ({ data, location, pageContext: { locale } }) => {
             <FormattedMessage id="experiment" />
           </h1>
           <p>
-            Trying about different things. Please dont mind at github commit
-            message, because only me who works in this project. This experiment
-            does not have to be successful.
+            Trying about different things. Experiment does not have to be
+            successful.
           </p>
         </div>
         <div>

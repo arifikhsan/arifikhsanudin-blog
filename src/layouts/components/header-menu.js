@@ -40,9 +40,13 @@ const HeaderMenu = () => {
           <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
             <div style={{ display: `flex`, justifyContent: `space-between` }}>
               <div></div>
-              <div onClick={() => setOpen(false)} style={{ cursor: `pointer` }}>
+              <a
+                href=""
+                onClick={() => setOpen(false)}
+                style={{ cursor: `pointer` }}
+              >
                 Keluar
-              </div>
+              </a>
             </div>
             <div style={{ marginTop: `6rem` }}>
               <MenuLink isMobile={isMobile} />
@@ -54,6 +58,7 @@ const HeaderMenu = () => {
         <HomeLink />
         {isMobile ? (
           <a
+            href=""
             style={{
               marginBottom: `0px`,
               boxShadow: `none`,

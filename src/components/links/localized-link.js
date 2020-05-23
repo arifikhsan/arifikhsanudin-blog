@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { injectIntl } from 'react-intl'
+import React from "react"
+import { Link } from "gatsby"
+import { injectIntl } from "react-intl"
 
-import locales from '../../config/locales'
+import locales from "../../config/locales"
 
 const LocalizedLink = ({ to, intl: { locale }, ...props }) => {
   const path = locales[locale].default ? to : `/${locale}${to}`
