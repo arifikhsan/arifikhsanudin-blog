@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions }) => {
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
+          limit: ${process.env.NODE_ENV == "production" ? 1000 : 5}
         ) {
           edges {
             node {
@@ -62,7 +62,7 @@ exports.createPages = async ({ graphql, actions }) => {
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
+          limit: ${process.env.NODE_ENV == "production" ? 1000 : 5}
         ) {
           edges {
             node {

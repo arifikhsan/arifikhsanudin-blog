@@ -90,13 +90,22 @@ module.exports = {
         icon: `src/assets/ai.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-offline`,
+
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Montserrat", "Merriweather"],
+        },
+      },
+    },
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-postcss`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    `gatsby-plugin-offline`,
   ],
 }
