@@ -2,8 +2,6 @@ import React from "react"
 import SEO from "../components/seo"
 import PageLayout from "../layouts/page-layout"
 import { graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
-import { useMediaQuery } from "react-responsive"
 import Img from "gatsby-image"
 
 const CertificatePage = ({ data, location, pageContext: { locale } }) => {
@@ -14,38 +12,18 @@ const CertificatePage = ({ data, location, pageContext: { locale } }) => {
   const binar = data.binar.childImageSharp.fluid
   const kotlin = data.kotlin.childImageSharp.fluid
   const androidBeginner = data.androidBeginner.childImageSharp.fluid
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
+
   return (
     <PageLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Certificate" />
       <div style={{ textAlign: `center` }}>
-        <div
-          style={{
-            marginTop: rhythm(3),
-            display: `flex`,
-            flexDirection: `column`,
-            alignItems: `center`,
-            alignContent: `center`,
-          }}
-        >
+        <div className="mt-12 flex flex-col justify-center items-center">
           <h1>Certificate</h1>
         </div>
         <div>
           <h2>Coding</h2>
-          <div
-            style={{
-              display: `flex`,
-              justifyContent: `center`,
-              flexWrap: `wrap`,
-            }}
-          >
-            <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1.5),
-                padding: rhythm(1),
-              }}
-            >
+          <div className="flex flex-wrap justify-center">
+            <div className="w-full md:w-1/2 mt-6 p-4">
               <Img
                 fluid={azure}
                 style={{
@@ -59,13 +37,7 @@ const CertificatePage = ({ data, location, pageContext: { locale } }) => {
                 database, web server, and deploy code.
               </p>
             </div>
-            <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1.5),
-                padding: rhythm(1),
-              }}
-            >
+            <div className="w-full md:w-1/2 mt-6 p-4">
               <Img
                 fluid={kotlin}
                 style={{
@@ -76,13 +48,7 @@ const CertificatePage = ({ data, location, pageContext: { locale } }) => {
               <h3>Start Coding using Kotlin</h3>
               <p>I learned about how to code using kotlin.</p>
             </div>
-            <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1.5),
-                padding: rhythm(1),
-              }}
-            >
+            <div className="w-full md:w-1/2 mt-6 p-4">
               <Img
                 fluid={aws}
                 style={{
@@ -96,13 +62,7 @@ const CertificatePage = ({ data, location, pageContext: { locale } }) => {
                 Elastic Beanstalk, and many more.
               </p>
             </div>
-            <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1.5),
-                padding: rhythm(1),
-              }}
-            >
+            <div className="w-full md:w-1/2 mt-6 p-4">
               <Img
                 fluid={androidBeginner}
                 style={{
@@ -117,13 +77,7 @@ const CertificatePage = ({ data, location, pageContext: { locale } }) => {
               </p>
             </div>
 
-            <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1.5),
-                padding: rhythm(1),
-              }}
-            >
+            <div className="w-full md:w-1/2 mt-6 p-4">
               <Img
                 fluid={binar}
                 style={{
@@ -149,13 +103,7 @@ const CertificatePage = ({ data, location, pageContext: { locale } }) => {
               flexWrap: `wrap`,
             }}
           >
-            <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1.5),
-                padding: rhythm(1),
-              }}
-            >
+            <div className="w-full md:w-1/2 mt-6 p-4">
               <Img
                 fluid={seo}
                 style={{
@@ -252,22 +200,5 @@ export const pageQuery = graphql`
         }
       }
     }
-    # allFile(
-    #   filter: {
-    #     sourceInstanceName: { eq: "asset" }
-    #     extension: { in: ["jpg", "png"] }
-    #     relativeDirectory: { eq: "certificates" }
-    #   }
-    # ) {
-    #   edges {
-    #     node {
-    #       childImageSharp {
-    #         fluid {
-    #           ...GatsbyImageSharpFluid
-    #         }
-    #       }
-    #     }
-    #   }
-    # }
   }
 `

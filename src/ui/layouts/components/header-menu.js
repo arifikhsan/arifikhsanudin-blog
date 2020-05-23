@@ -1,80 +1,47 @@
-import React, { useState } from "react"
-import { rhythm } from "../../utils/typography"
-import { useMediaQuery } from "react-responsive"
+import React, { useState, Component } from "react"
 import MenuLink from "./menu-link"
 import HomeLink from "./home-link"
 
-const style = {
-  nav: {
-    display: `flex`,
-    justifyContent: `space-between`,
-    alignItems: `center`,
-  },
-  linkGroups: {
-    display: `flex`,
-    justifyContent: `flex-end`,
-    alignItems: `center`,
-  },
-  marginEach: {
-    marginLeft: rhythm(1.5),
-  },
-}
+class HeaderMenu extends Component {
+  state = {
+    open: false,
+  }
 
-const HeaderMenu = () => {
-  const [open, setOpen] = useState(false)
-  const isMobile = useMediaQuery({ query: "(max-width: 600px)" })
-  return (
-    <div>
-      {isMobile && open && (
-        <div
-          style={{
-            backgroundColor: `white`,
-            position: `fixed`,
-            right: `0`,
-            left: `0`,
-            top: `0`,
-            bottom: `0`,
-            height: `100vh`,
-          }}
-        >
-          <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
-            <div style={{ display: `flex`, justifyContent: `space-between` }}>
-              <div></div>
-              <a
-                href=""
-                onClick={() => setOpen(false)}
-                style={{ cursor: `pointer` }}
-              >
-                Keluar
-              </a>
-            </div>
-            <div style={{ marginTop: `6rem` }}>
-              <MenuLink isMobile={isMobile} />
+  toggleOpen = () => this.setState({ open: !this.state.open })
+
+  render() {
+    const { open } = this.state
+
+    return (
+      <div>
+        {open && (
+          <div className="bg-white fixed inset-0 h-screen">
+            <div className="p-4">
+              <div className="flex space-between">
+                <div></div>
+                <a onClick={this.toggleOpen} className="cursor-pointer">
+                  Keluar
+                </a>
+              </div>
+              <div className="mt-12">
+                <MenuLink className="hidden md:block" />
+              </div>
             </div>
           </div>
-        </div>
-      )}
-      <nav style={style.nav}>
-        <HomeLink />
-        {isMobile ? (
-          <a
-            href=""
-            style={{
-              marginBottom: `0px`,
-              boxShadow: `none`,
-              color: `black`,
-              cursor: `pointer`,
-            }}
-            onClick={() => setOpen(true)}
-          >
-            Menu
-          </a>
-        ) : (
-          <MenuLink isMobile={isMobile} />
         )}
-      </nav>
-    </div>
-  )
+        <nav className="flex justify-between items-center">
+          <HomeLink />
+          <p className="md:hidden cursor-pointer" onClick={this.toggleOpen}>
+            Menu
+          </p>
+          <MenuLink className="hidden md:block" />
+        </nav>
+      </div>
+    )
+  }
+}
+const HeaderMenu = () => {
+  const [open, setOpen] = useState(false)
 }
 
 export default HeaderMenu

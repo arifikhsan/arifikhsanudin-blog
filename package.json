@@ -40,7 +40,6 @@
     "react-helmet": "^5.2.1",
     "react-i18next": "^11.3.4",
     "react-intl": "^4.2.2",
-    "react-responsive": "^8.0.3",
     "titleize": "^2.1.0"
   },
   "devDependencies": {

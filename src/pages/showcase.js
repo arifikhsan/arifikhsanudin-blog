@@ -2,23 +2,15 @@ import React from "react"
 import SEO from "../components/seo"
 import PageLayout from "../layouts/page-layout"
 import { graphql, Link } from "gatsby"
-import { rhythm } from "../utils/typography"
-import { useMediaQuery } from "react-responsive"
 import Img from "gatsby-image"
 
 const GatsbySection = ({ data }) => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
   const showcases = data.allMarkdownRemark.edges
+
   return (
     <div>
       <h2>ReactJS + GatsbyJS</h2>
-      <div
-        style={{
-          display: `flex`,
-          justifyContent: `center`,
-          flexWrap: `wrap`,
-        }}
-      >
+      <div className="flex flex-wrap justify-center">
         {showcases
           .filter(({ node }) => node.frontmatter.category === "gatsby")
           .map(({ node }) => {
@@ -26,20 +18,13 @@ const GatsbySection = ({ data }) => {
             const image = node.frontmatter.featuredImage.childImageSharp.fluid
 
             return (
-              <div
-                key={node.fields.slug}
-                style={{
-                  width: isTabletOrMobile ? `100%` : `50%`,
-                  marginTop: rhythm(1.5),
-                  padding: rhythm(1),
-                }}
-              >
+              <div key={node.fields.slug} className="w-full md:w-1/2 p-4">
                 <Img
                   fluid={image}
+                  className="h-64"
                   style={{
                     boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
                     borderRadius: `0.5rem`,
-                    height: `16rem`,
                   }}
                 />
                 <h3>{title}</h3>
@@ -85,16 +70,8 @@ const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
   return (
     <PageLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Showcase" />
-      <div style={{ textAlign: `center` }}>
-        <div
-          style={{
-            marginTop: rhythm(3),
-            display: `flex`,
-            flexDirection: `column`,
-            alignItems: `center`,
-            alignContent: `center`,
-          }}
-        >
+      <div className="text-center">
+        <div className="flex flex-col justify-center items-center mt-12">
           <h1>Showcase</h1>
         </div>
         <GatsbySection data={data} />

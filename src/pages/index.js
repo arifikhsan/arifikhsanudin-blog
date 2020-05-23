@@ -2,7 +2,6 @@ import React from "react"
 import SEO from "../components/seo"
 import PageLayout from "../layouts/page-layout"
 import { graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
 
 import rails from "../assets/svg/rails.svg"
 import vue from "../assets/svg/vue.svg"
@@ -18,24 +17,12 @@ import ImageIcon from "../components/image-icon"
 
 const IndexPage = ({ data, location, pageContext: { locale } }) => {
   const siteTitle = data.site.siteMetadata.title
-  const isMobile = useMediaQuery({ query: "(max-width: 425px)" })
-
-  const style = {
-    hero: {
-      marginTop: rhythm(3),
-      display: `flex`,
-      flexDirection: `column`,
-      alignItems: `center`,
-      alignContent: `center`,
-      textAlign: `center`,
-    },
-  }
 
   return (
     <PageLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Homepage" />
       <div>
-        <div style={style.hero}>
+        <div className="mt-12 flex flex-col justify-center items-center text-center">
           <h1>
             <FormattedMessage id="hello" />
           </h1>
@@ -43,23 +30,10 @@ const IndexPage = ({ data, location, pageContext: { locale } }) => {
             <FormattedMessage id="whatdoido" />
           </h2>
         </div>
-        <div
-          style={{
-            marginTop: rhythm(4),
-            display: `flex`,
-            flexWrap: `wrap`,
-            textAlign: `center`,
-          }}
-        >
-          <div style={{ width: isMobile ? `100%` : `50%` }}>
+        <div className="mt-16 flex flex-wrap text-center">
+          <div className="w-full md:w-1/2">
             <p>I like to work with</p>
-            <div
-              style={{
-                display: `flex`,
-                flexWrap: `wrap`,
-                justifyContent: `center`,
-              }}
-            >
+            <div className="flex flex-wrap justify-center">
               <ImageIcon name="rails" image={rails} />
               <ImageIcon name="vue" image={vue} />
               <ImageIcon name="react" image={react} />
@@ -67,14 +41,9 @@ const IndexPage = ({ data, location, pageContext: { locale } }) => {
               <ImageIcon name="android" image={android} />
             </div>
           </div>
-          <div
-            style={{
-              width: isMobile ? `100%` : `50%`,
-              marginTop: isMobile && rhythm(2),
-            }}
-          >
+          <div className="w-full md:w-1/2 mt-8 md:mt-0">
             <p>Find me on</p>
-            <div style={{ display: `flex`, justifyContent: `center` }}>
+            <div className="flex justify-center">
               <a href="https://www.github.com/arifikhsan">
                 <ImageIcon name="github" image={github} />
               </a>
@@ -84,11 +53,6 @@ const IndexPage = ({ data, location, pageContext: { locale } }) => {
               <a href="https://api.whatsapp.com/send?phone=6289516784488">
                 <ImageIcon name="whatsapp" image={whatsapp} />
               </a>
-              <style jsx>{`
-                a {
-                  box-shadow: none;
-                }
-              `}</style>
             </div>
           </div>
         </div>

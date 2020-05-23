@@ -1,23 +1,12 @@
 import React from "react"
-
-import { rhythm } from "../utils/typography"
 import Layout from "./layout"
 import SEO from "../components/seo"
 
 const BlogLayout = ({ children, ...props }) => {
-  const style = {
-    blog: {
-      marginTop: rhythm(1),
-      marginLeft: `auto`,
-      marginRight: `auto`,
-      maxWidth: rhythm(24),
-      padding: `${rhythm(3 / 4)} ${rhythm(3 / 4)}`,
-    },
-  }
   return (
     <Layout {...props}>
       <SEO title="Blog tentang pemrograman ruby, javascript, android, flutter, dan lain lain" />
-      <div style={style.blog}>
+      <div style={style.blog} className="mt-4 max-w-xl mx-auto p-4">
         <main>{children}</main>
       </div>
     </Layout>

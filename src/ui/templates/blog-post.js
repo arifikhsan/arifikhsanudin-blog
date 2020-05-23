@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
 import titleize from "titleize"
 import BlogLayout from "../layouts/blog-layout"
 
@@ -22,57 +21,22 @@ class BlogPostTemplate extends React.Component {
         />
         <article>
           <header>
-            <h1
-              style={{
-                marginTop: rhythm(1),
-                marginBottom: 0,
-              }}
-            >
-              {titleize(post.frontmatter.title)}
-            </h1>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                opacity: `0.8`,
-                marginBottom: rhythm(1),
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
+            <h1 className="mt-4">{titleize(post.frontmatter.title)}</h1>
+            <p className="opacity-75">{post.frontmatter.date}</p>
           </header>
           <section
-            style={{ marginTop: rhythm(2) }}
+            className="mt-8"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-          <hr
-            style={{
-              marginBottom: rhythm(1),
-              margin: `${rhythm(2)} ${rhythm(1)}`,
-            }}
-          />
+          <hr className="m-4" />
           <footer>
             <Bio />
           </footer>
         </article>
 
         <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li
-              style={{
-                width: `50%`,
-                textAlign: `justify`,
-                paddingRight: rhythm(1 / 2),
-              }}
-            >
+          <ul className="flex flex-wrap justify-between">
+            <li className="w-1/2 text-justify pr-2">
               {previous && (
                 <Link
                   to={previous.fields.slug}
@@ -86,13 +50,7 @@ class BlogPostTemplate extends React.Component {
                 </Link>
               )}
             </li>
-            <li
-              style={{
-                width: `50%`,
-                textAlign: `justify`,
-                paddingLeft: rhythm(1 / 2),
-              }}
-            >
+            <li className="w-1/2 text-justify pr-2">
               {next && (
                 <Link
                   to={next.fields.slug}

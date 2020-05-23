@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import BlogLayout from "../layouts/blog-layout"
-import SEO from "../components/seo"
+import SEO from "../comp../ui/layouts/blog-layout"
 import titleize from "titleize"
 import { FormattedMessage } from "react-intl"
 
@@ -20,12 +20,7 @@ const BlogIndex = ({ data, location, pageContext: { locale } }) => {
         return (
           <article key={node.fields.slug}>
             <header>
-              <h3
-                style={{
-                  marginTop: rhythm(2),
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
+              <h3 className="mt-8">
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {titleize(title)}
                 </Link>

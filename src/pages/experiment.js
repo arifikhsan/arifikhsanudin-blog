@@ -1,30 +1,19 @@
 import React from "react"
 import SEO from "../components/seo"
-import ExperimentLayout from "../layouts/experiment-layout"
 import { graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
-import { useMediaQuery } from "react-responsive"
+import { FormattedMessage } from "react-intl"
+import ExperimentLayout from "../layouts/experiment-layout"
 import GithubLink from "../components/links/github-link"
 import GithubActionsLink from "../components/links/github-actions-link"
-import { FormattedMessage } from "react-intl"
 
 const ExperimentPage = ({ data, location, pageContext: { locale } }) => {
   const siteTitle = data.site.siteMetadata.title
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
 
   return (
     <ExperimentLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Experiment" />
       <div style={{ textAlign: `center` }}>
-        <div
-          style={{
-            marginTop: rhythm(3),
-            display: `flex`,
-            flexDirection: `column`,
-            alignItems: `center`,
-            alignContent: `center`,
-          }}
-        >
+        <div className="mt-12 flex flex-col justify-center items-center">
           <h1>
             <FormattedMessage id="experiment" />
           </h1>
@@ -42,50 +31,31 @@ const ExperimentPage = ({ data, location, pageContext: { locale } }) => {
               flexWrap: `wrap`,
             }}
           >
-            <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1),
-                padding: rhythm(0.5),
-              }}
-            >
+            <div className="w-full md:w-1/2 mt-4 pr-4">
               <div
+                className="p-4"
                 style={{
-                  padding: rhythm(1),
                   boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
                   borderRadius: `0.5rem`,
                 }}
               >
-                <h3 style={{ marginTop: rhythm(0) }}>
-                  Dark Theme Switch using BLoC
-                </h3>
+                <h3>Dark Theme Switch using BLoC</h3>
                 <p>
                   Switching theme using button from dark to light and vice
                   versa. State of theme is done using Business Logic Components.
                   All code are tested using unit test, integration test, and
                   driver test.
                 </p>
-                <div
-                  style={{
-                    display: `flex`,
-                    justifyContent: `space-evenly`,
-                  }}
-                >
+                <div className="flex justify-evenly">
                   <GithubLink repo="flutter_theme_bloc" />
                   <GithubActionsLink repo="flutter_theme_bloc" />
                 </div>
               </div>
             </div>
-            <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1),
-                padding: rhythm(0.5),
-              }}
-            >
+            <div className="w-full md:w-1/2 mt-4 pr-4">
               <div
+                className="p-4"
                 style={{
-                  padding: rhythm(1),
                   boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
                   borderRadius: `0.5rem`,
                 }}
@@ -111,58 +81,36 @@ const ExperimentPage = ({ data, location, pageContext: { locale } }) => {
                 </div>
               </div>
             </div>
-            <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1),
-                padding: rhythm(0.5),
-              }}
-            >
+            <div className="w-full md:w-1/2 mt-4 pr-4">
               <div
+                className="p-4"
                 style={{
-                  padding: rhythm(1),
                   boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
                   borderRadius: `0.5rem`,
                 }}
               >
                 <h3 style={{ marginTop: 0 }}>Flutter Components</h3>
                 <p>A small project built for trying many flutter widgets.</p>
-                <div
-                  style={{
-                    display: `flex`,
-                    justifyContent: `space-evenly`,
-                  }}
-                >
+                <div className="flex justify-evenly">
                   <GithubLink repo="flutter_components" />
                   <GithubActionsLink repo="flutter_components" />
                 </div>
               </div>
             </div>
-            <div
-              style={{
-                width: isTabletOrMobile ? `100%` : `50%`,
-                marginTop: rhythm(1),
-                padding: rhythm(0.5),
-              }}
-            >
+            <div className="w-full md:w-1/2 mt-4 pr-4">
               <div
+                className="p-4"
                 style={{
-                  padding: rhythm(1),
                   boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
                   borderRadius: `0.5rem`,
                 }}
               >
-                <h3 style={{ marginTop: 0 }}>Flutter Number Trivia</h3>
+                <h3>Flutter Number Trivia</h3>
                 <p>
                   Get a meaning from a number. This made by following TDD
                   tutorial from Reso Coder. But i change the code a little bit.
                 </p>
-                <div
-                  style={{
-                    display: `flex`,
-                    justifyContent: `space-evenly`,
-                  }}
-                >
+                <div className="flex justify-evenly">
                   <GithubLink repo="flutter_number_trivia_season_2" />
                   <GithubActionsLink repo="flutter_number_trivia_season_2" />
                 </div>

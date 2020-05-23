@@ -1,12 +1,12 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const locales = require("./src/config/locales")
+const locales = require("./src/config/i18n/locales")
 
 // * blog
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogPost = path.resolve(`./src/ui/templates/blog-post.js`)
   const result = await graphql(
     `
       {
@@ -56,7 +56,7 @@ exports.createPages = async ({ graphql, actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const showcasePost = path.resolve(`./src/templates/showcase-post.js`)
+  const showcasePost = path.resolve(`./src/ui/templates/showcase-post.js`)
   const result = await graphql(
     `
       {
