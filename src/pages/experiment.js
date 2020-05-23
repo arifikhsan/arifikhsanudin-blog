@@ -1,10 +1,10 @@
 import React from "react"
-import SEO from "../components/seo"
+import SEO from "../ui/components/seo"
 import { graphql } from "gatsby"
 import { FormattedMessage } from "react-intl"
-import ExperimentLayout from "../layouts/experiment-layout"
-import GithubLink from "../components/links/github-link"
-import GithubActionsLink from "../components/links/github-actions-link"
+import ExperimentLayout from "../ui/layouts/experiment-layout"
+import GithubLink from "../ui/components/links/github-link"
+import GithubActionsLink from "../ui/components/links/github-actions-link"
 
 const ExperimentPage = ({ data, location, pageContext: { locale } }) => {
   const siteTitle = data.site.siteMetadata.title

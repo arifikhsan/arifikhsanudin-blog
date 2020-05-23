@@ -1,8 +1,8 @@
 import React from "react"
-import SEO from "../components/seo"
-import PageLayout from "../layouts/page-layout"
 import { graphql } from "gatsby"
-
+import { FormattedMessage } from "react-intl"
+import SEO from "../ui/components/seo"
+import PageLayout from "../ui/layouts/page-layout"
 import rails from "../assets/svg/rails.svg"
 import vue from "../assets/svg/vue.svg"
 import react from "../assets/svg/react.svg"
@@ -11,9 +11,7 @@ import android from "../assets/svg/android.svg"
 import github from "../assets/svg/github.svg"
 import gitlab from "../assets/svg/gitlab.svg"
 import whatsapp from "../assets/svg/whatsapp.svg"
-import { useMediaQuery } from "react-responsive"
-import { FormattedMessage } from "react-intl"
-import ImageIcon from "../components/image-icon"
+import ImageIcon from "../ui/components/image-icon"
 
 const IndexPage = ({ data, location, pageContext: { locale } }) => {
   const siteTitle = data.site.siteMetadata.title

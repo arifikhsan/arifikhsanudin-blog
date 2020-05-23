@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react"
+import React, { Component } from "react"
 import MenuLink from "./menu-link"
 import HomeLink from "./home-link"
 
@@ -39,9 +39,6 @@ class HeaderMenu extends Component {
       </div>
     )
   }
-}
-const HeaderMenu = () => {
-  const [open, setOpen] = useState(false)
 }
 
 export default HeaderMenu

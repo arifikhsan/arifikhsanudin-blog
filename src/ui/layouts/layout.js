@@ -1,8 +1,8 @@
 import React from "react"
 import { IntlProvider } from "react-intl"
-import id from "../locales/id.json"
-import en from "../locales/en.json"
-import "../styles/index.css"
+import id from "../../config/locales/id.json"
+import en from "../../config/locales/en.json"
+import "../../assets/styles/index.css"
 import HeaderMenu from "./components/header-menu"
 
 const messages = { id, en }

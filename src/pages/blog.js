@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import BlogLayout from "../layouts/blog-layout"
-import SEO from "../comp../ui/layouts/blog-layout"
+import BlogLayout from "../ui/layouts/blog-layout"
+import SEO from "../ui/layouts/blog-layout"
 import titleize from "titleize"
 import { FormattedMessage } from "react-intl"
 

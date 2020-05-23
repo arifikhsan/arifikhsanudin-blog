@@ -6,7 +6,7 @@ const BlogLayout = ({ children, ...props }) => {
   return (
     <Layout {...props}>
       <SEO title="Blog tentang pemrograman ruby, javascript, android, flutter, dan lain lain" />
-      <div style={style.blog} className="mt-4 max-w-xl mx-auto p-4">
+      <div className="mt-4 max-w-xl mx-auto p-4">
         <main>{children}</main>
       </div>
     </Layout>
