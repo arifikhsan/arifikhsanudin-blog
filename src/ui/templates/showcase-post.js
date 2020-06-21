@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import SEO from "../components/seo"
 import titleize from "titleize"
-import ShowcaseLayout from "../layouts/showcase-layout"
+import ShowcaseLayout from "../layouts/ShowcaseLayout"
 
 class ShowcasePostTemplate extends React.Component {
   render() {
@@ -35,7 +35,7 @@ class ShowcasePostTemplate extends React.Component {
 
         <nav>
           <ul className="flex flex-wrap justify-between">
-            <li className="w-1/2 text-justify pr-2">
+            <li className="w-1/2 pr-2 text-justify">
               {previous && (
                 <Link
                   to={previous.fields.slug}
@@ -49,7 +49,7 @@ class ShowcasePostTemplate extends React.Component {
                 </Link>
               )}
             </li>
-            <li className="w-1/2 text-justify pr-2">
+            <li className="w-1/2 pr-2 text-justify">
               {next && (
                 <Link
                   to={next.fields.slug}

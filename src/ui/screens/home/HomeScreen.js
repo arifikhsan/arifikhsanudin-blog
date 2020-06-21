@@ -7,8 +7,8 @@ const HomeScreen = ({ location, siteTitle, locale }) => {
   return (
     <PageLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Homepage" />
-      <div className="py-24 md:py-32">
-        <div className="py-6 text-center">
+      <div className="py-16 md:py-24 md:py-32">
+        <div className="py-6 text-center md:py-12">
           <h1 className="py-6 text-4xl font-black text-gray-900">
             <FormattedMessage id="hello" />
           </h1>
