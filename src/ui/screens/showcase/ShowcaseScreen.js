@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 import ShowcaseLayout from "../../layouts/ShowcaseLayout"
 import { FormattedMessage } from "react-intl"
+import SEO from "../../components/seo"
 
 const GatsbySection = ({ data }) => {
   const showcases = data.allMarkdownRemark.edges
@@ -68,6 +69,7 @@ const ShowcaseScreen = ({ location, data, locale }) => {
 
   return (
     <ShowcaseLayout location={location} locale={locale} title={siteTitle}>
+      <SEO title="Showcase" description="Every project i have done." />
       <div className="text-center">
         <div className="flex flex-col items-center justify-center mt-12">
           <h1 className="text-3xl font-black">
