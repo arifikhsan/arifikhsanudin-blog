@@ -87,7 +87,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#1E88E5`,
         display: `minimal-ui`,
-        icon: `src/assets/ai.png`,
+        icon: `src/assets/favicon.png`,
       },
     },
     `gatsby-plugin-transition-link`,

@@ -4,7 +4,7 @@ import LocalizedAniLink from "../../components/links/localized-ani-link"
 const MenuLink = props => {
   return (
     <div
-      className="flex flex-col items-center justify-center md:row md:justify-end"
+      className="flex flex-col items-center justify-center text-center md:row md:justify-end"
       {...props}
     >
       <hr className="w-full md:hidden" />

@@ -36,9 +36,9 @@ class HeaderMenu extends Component {
         {open && <OverlayMenu toggleOpen={this.toggleOpen} />}
         <nav className="flex items-center justify-between">
           <HomeLink />
-          <p className="p-4 cursor-pointer md:hidden" onClick={this.toggleOpen}>
+          <button className="p-4 cursor-pointer md:hidden" onClick={this.toggleOpen}>
             Menu
-          </p>
+          </button>
           <MenuLink className="hidden md:block" />
         </nav>
       </div>

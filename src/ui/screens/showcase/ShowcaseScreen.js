@@ -2,6 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 import ShowcaseLayout from "../../layouts/ShowcaseLayout"
+import { FormattedMessage } from "react-intl"
 
 const GatsbySection = ({ data }) => {
   const showcases = data.allMarkdownRemark.edges
@@ -63,15 +64,15 @@ const GatsbySection = ({ data }) => {
 }
 
 const ShowcaseScreen = ({ location, data, locale }) => {
+  const siteTitle = data.site.siteMetadata.title
+
   return (
-    <ShowcaseLayout
-      location={location}
-      title={data.site.siteMetadata.title}
-      locale={locale}
-    >
+    <ShowcaseLayout location={location} locale={locale} title={siteTitle}>
       <div className="text-center">
         <div className="flex flex-col items-center justify-center mt-12">
-          <h1 className="text-3xl font-black">Showcase</h1>
+          <h1 className="text-3xl font-black">
+            <FormattedMessage id="showcase" />
+          </h1>
         </div>
         <GatsbySection data={data} />
       </div>

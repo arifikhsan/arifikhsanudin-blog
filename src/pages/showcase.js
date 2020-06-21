@@ -2,8 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import ShowcaseScreen from "../ui/screens/showcase/ShowcaseScreen"
 
-
-
 const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
   return (
     <ShowcaseScreen

@@ -1,12 +1,11 @@
 import React from "react"
 
-const GithubActionsLink = ({repo}) => {
+const GithubActionsLink = ({repoUrl}) => {
   return (
     <a
-      href={`https://github.com/arifikhsan/${repo}/actions`}
+      href={`https://github.com/arifikhsan/${repoUrl}/actions`}
       target="_blank"
       rel="noopener noreferrer"
-      style={{ boxShadow: `none` }}
     >
       Github Actions
     </a>
