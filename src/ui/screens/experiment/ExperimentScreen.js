@@ -5,6 +5,30 @@ import GithubLink from "../../components/links/GithubLink"
 import GithubActionsLink from "../../components/links/GithubActionsLink"
 import SEO from "../../components/seo"
 
+const Posts = ({ experiments }) => {
+  return (
+    <div className="flex flex-wrap justify-center">
+      <div className="w-full mt-4 md:w-1/2">
+        {experiments.edges.map(experiment => {
+          const frontmatter = experiment.node.childMarkdownRemark.frontmatter
+          const id = experiment.node.childMarkdownRemark.id
+
+          return (
+            <div key={id} className="p-4 my-8">
+              <h3 className="py-4 text-2xl font-bold">{frontmatter.title}</h3>
+              <p className="py-4">{frontmatter.description}</p>
+              <div className="flex mt-4 justify-evenly">
+                <GithubLink repo={frontmatter.github_url} />
+                <GithubActionsLink repo={frontmatter.github_url} />
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
 const ExperimentScreen = ({ location, data, locale }) => {
   const siteTitle = data.site.siteMetadata.title
 
@@ -22,94 +46,8 @@ const ExperimentScreen = ({ location, data, locale }) => {
           </p>
         </div>
         <div className="my-4">
-          <h2 className="mt-8 text-2xl font-bold">Flutter</h2>
-          <div className="flex flex-wrap justify-center">
-            <div className="w-full mt-4 md:w-1/2">
-              <div
-                className="p-4"
-                style={{
-                  boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
-                  borderRadius: `0.5rem`,
-                }}
-              >
-                <h3>Dark Theme Switch using BLoC</h3>
-                <p>
-                  Switching theme using button from dark to light and vice
-                  versa. State of theme is done using Business Logic Components.
-                  All code are tested using unit test, integration test, and
-                  driver test.
-                </p>
-                <div className="flex justify-evenly">
-                  <GithubLink repo="flutter_theme_bloc" />
-                  <GithubActionsLink repo="flutter_theme_bloc" />
-                </div>
-              </div>
-            </div>
-            <div className="w-full pr-4 mt-4 md:w-1/2">
-              <div
-                className="p-4"
-                style={{
-                  boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
-                  borderRadius: `0.5rem`,
-                }}
-              >
-                <h3 style={{ marginTop: 0 }}>
-                  Flutter Github Action Automated Build, Test, and Upload
-                  Artifact
-                </h3>
-                <p>
-                  Build flutter project in Github Action. Automated tests
-                  including unit testing, integration testing, and driver
-                  testing. Test also run on three different os. Ubuntu, windows,
-                  and Macos.
-                </p>
-                <div
-                  style={{
-                    display: `flex`,
-                    justifyContent: `space-evenly`,
-                  }}
-                >
-                  <GithubLink repo="flutter_github_actions" />
-                  <GithubActionsLink repo="flutter_github_actions" />
-                </div>
-              </div>
-            </div>
-            <div className="w-full pr-4 mt-4 md:w-1/2">
-              <div
-                className="p-4"
-                style={{
-                  boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
-                  borderRadius: `0.5rem`,
-                }}
-              >
-                <h3 style={{ marginTop: 0 }}>Flutter Components</h3>
-                <p>A small project built for trying many flutter widgets.</p>
-                <div className="flex justify-evenly">
-                  <GithubLink repo="flutter_components" />
-                  <GithubActionsLink repo="flutter_components" />
-                </div>
-              </div>
-            </div>
-            <div className="w-full pr-4 mt-4 md:w-1/2">
-              <div
-                className="p-4"
-                style={{
-                  boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
-                  borderRadius: `0.5rem`,
-                }}
-              >
-                <h3>Flutter Number Trivia</h3>
-                <p>
-                  Get a meaning from a number. This made by following TDD
-                  tutorial from Reso Coder. But i change the code a little bit.
-                </p>
-                <div className="flex justify-evenly">
-                  <GithubLink repo="flutter_number_trivia_season_2" />
-                  <GithubActionsLink repo="flutter_number_trivia_season_2" />
-                </div>
-              </div>
-            </div>
-          </div>
+          <h2 className="mt-10 text-2xl font-bold">Flutter</h2>
+          <Posts experiments={data.experiments} />
         </div>
       </div>
     </ExperimentLayout>
