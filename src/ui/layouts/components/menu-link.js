@@ -7,7 +7,6 @@ const MenuLink = props => {
       className="flex flex-col items-center justify-center text-center md:row md:justify-end"
       {...props}
     >
-      <hr className="w-full md:hidden" />
       <LocalizedAniLink
         to="/showcase"
         title="showcase"
@@ -31,7 +30,6 @@ const MenuLink = props => {
         title="blog"
         className="w-full px-4 py-6 md:ml-6 md:mt-0"
       />
-      <hr className="w-full md:hidden" />
     </div>
   )
 }

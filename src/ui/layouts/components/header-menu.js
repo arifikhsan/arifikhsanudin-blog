@@ -6,15 +6,19 @@ import { FormattedMessage } from "react-intl"
 const OverlayMenu = ({ toggleOpen }) => {
   return (
     <div className="fixed inset-0 z-50 h-screen bg-white">
-      <div className="">
-        <div className="flex justify-between">
-          <div></div>
-          <button onClick={toggleOpen} className="p-4 cursor-pointer">
+      <div className="flex flex-col justify-between h-full">
+        <div className="flex justify-between p-4 border-b">
+          <p>{"o((>ω< ))o"}</p>
+          <button onClick={toggleOpen} className="">
             <FormattedMessage id="close" />
           </button>
         </div>
-        <div className="mt-12">
+        <div className="flex items-center justify-center">
           <MenuLink />
+        </div>
+        <div className="inline-flex justify-between p-4 border-t">
+          <p>arifikhsanudin.now.sh</p>
+          <p>（*＾-＾*）</p>
         </div>
       </div>
     </div>
@@ -36,7 +40,10 @@ class HeaderMenu extends Component {
         {open && <OverlayMenu toggleOpen={this.toggleOpen} />}
         <nav className="flex items-center justify-between">
           <HomeLink />
-          <button className="p-4 cursor-pointer md:hidden" onClick={this.toggleOpen}>
+          <button
+            className="p-4 cursor-pointer md:hidden"
+            onClick={this.toggleOpen}
+          >
             Menu
           </button>
           <MenuLink className="hidden md:block" />
