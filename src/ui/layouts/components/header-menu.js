@@ -5,10 +5,10 @@ import HomeLink from "./home-link"
 const OverlayMenu = ({ toggleOpen }) => {
   return (
     <div className="fixed inset-0 z-50 h-screen bg-white">
-      <div className="p-4">
+      <div className="">
         <div className="flex justify-between">
           <div></div>
-          <button onClick={toggleOpen} className="cursor-pointer">
+          <button onClick={toggleOpen} className="p-4 cursor-pointer">
             Keluar
           </button>
         </div>

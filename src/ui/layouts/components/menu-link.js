@@ -4,29 +4,34 @@ import LocalizedAniLink from "../../components/links/localized-ani-link"
 const MenuLink = props => {
   return (
     <div
-      className="flex justify-start flex-col md:row md:justify-end items-center"
+      className="flex flex-col items-center justify-center md:row md:justify-end"
       {...props}
     >
+      <hr className="w-full md:hidden" />
       <LocalizedAniLink
         to="/showcase"
         title="showcase"
-        className="md:ml-6 mt-6 md:mt-0"
+        className="w-full px-4 py-6 md:ml-6 md:mt-0"
       />
+      <hr className="w-full md:hidden" />
       <LocalizedAniLink
         to="/experiment"
         title="experiment"
-        className="md:ml-6 mt-6 md:mt-0"
+        className="w-full px-4 py-6 md:ml-6 md:mt-0"
       />
+      <hr className="w-full md:hidden" />
       <LocalizedAniLink
         to="/certificate"
         title="certificate"
-        className="md:ml-6 mt-6 md:mt-0"
+        className="w-full px-4 py-6 md:ml-6 md:mt-0"
       />
+      <hr className="w-full md:hidden" />
       <LocalizedAniLink
         to="/blog"
         title="blog"
-        className="md:ml-6 mt-6 md:mt-0"
+        className="w-full px-4 py-6 md:ml-6 md:mt-0"
       />
+      <hr className="w-full md:hidden" />
     </div>
   )
 }
