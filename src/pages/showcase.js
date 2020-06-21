@@ -21,10 +21,9 @@ const GatsbySection = ({ data }) => {
               <div key={node.fields.slug} className="w-full md:w-1/2 p-4">
                 <Img
                   fluid={image}
-                  className="h-64"
+                  className="h-64 rounded-lg"
                   style={{
                     boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
-                    borderRadius: `0.5rem`,
                   }}
                 />
                 <h3>{title}</h3>

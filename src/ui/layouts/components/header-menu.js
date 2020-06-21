@@ -4,7 +4,7 @@ import HomeLink from "./home-link"
 
 const OverlayMenu = ({ toggleOpen }) => {
   return (
-    <div className="bg-white fixed z-50 inset-0 h-screen">
+    <div className="fixed inset-0 z-50 h-screen bg-white">
       <div className="p-4">
         <div className="flex justify-between">
           <div></div>
@@ -33,9 +33,9 @@ class HeaderMenu extends Component {
     return (
       <div>
         {open && <OverlayMenu toggleOpen={this.toggleOpen} />}
-        <nav className="flex justify-between items-center">
+        <nav className="flex items-center justify-between">
           <HomeLink />
-          <p className="md:hidden cursor-pointer" onClick={this.toggleOpen}>
+          <p className="p-4 cursor-pointer md:hidden" onClick={this.toggleOpen}>
             Menu
           </p>
           <MenuLink className="hidden md:block" />

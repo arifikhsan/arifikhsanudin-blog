@@ -90,15 +90,6 @@ module.exports = {
         icon: `src/assets/ai.png`,
       },
     },
-
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        google: {
-          families: ["Montserrat", "Merriweather"],
-        },
-      },
-    },
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-scroll-reveal`,
