@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import MenuLink from "./menu-link"
 import HomeLink from "./home-link"
+import { FormattedMessage } from "react-intl"
 
 const OverlayMenu = ({ toggleOpen }) => {
   return (
@@ -9,7 +10,7 @@ const OverlayMenu = ({ toggleOpen }) => {
         <div className="flex justify-between">
           <div></div>
           <button onClick={toggleOpen} className="p-4 cursor-pointer">
-            Keluar
+            <FormattedMessage id="close" />
           </button>
         </div>
         <div className="mt-12">
