@@ -6,54 +6,18 @@ description: Cara menggunakan font google pada Gatsby JS
 
 ## Langkah
 
-1. Install plugin `gatsby-plugin-web-font-loader`.
+1. Cari font di [google font](fonts.google.com).
 
-```bash
-
-npm install --save gatsby-plugin-web-font-loader
-
-```
-
-Atau dengan yarn
-
-```bash
-
-yarn add gatsby-plugin-web-font-loader
-
-```
-
-2. Konfigurasikan plugin di file `gatsby-config.js`, beserta font family yang akan digunakan.
-
-```js
-
-module.exports = {
-  plugins: [
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Droid Sans', 'Droid Serif']
-        }
-      }
-    }
-  ]
-}
-
-```
-
-3. Google font telah bisa digunakan di `font-family`.
+2. Import langsung pada file css
 
 ```css
 
-* {
-  font-family: "Droid Sans";
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
+* {
+  font-family: 'Open Sans', sans-serif;
+}
 
 ```
 
-> Jangan lupa untuk mengimport file styling di file jsx
-
-## Sumber
-
-[Gatsby plugin web font loader](https://www.gatsbyjs.org/packages/gatsby-plugin-web-font-loader/?=google%20fonts)
+3. Import file css tersebut ke layout react
