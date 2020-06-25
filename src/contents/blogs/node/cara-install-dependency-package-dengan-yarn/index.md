@@ -1,12 +1,21 @@
 ---
 title: Cara install dependency package dengan Yarn
 date: "2020-03-18T09:26:00.000Z"
-description: Cara install dependency package dengan Yarn
+description: Cara install dependency package dengan Yarn di windows dan ubuntu
 ---
 
 ## Pastikan sudah menginstall NodeJS
 
-[Download NodeJS](https://nodejs.org/en/).
+[Download NodeJS disini](https://nodejs.org/en/).
+
+Kemudian pastikan dengan mengecek versinya di terminal. Dengan cara mengetik:
+
+```bash
+
+node --version
+yarn --version
+
+```
 
 ## Cara install 
 

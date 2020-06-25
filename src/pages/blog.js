@@ -1,47 +1,12 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import BlogLayout from "../ui/layouts/blog-layout"
-import SEO from "../ui/layouts/blog-layout"
-import titleize from "titleize"
-import { FormattedMessage } from "react-intl"
+import { graphql } from "gatsby"
+import { BlogScreen } from "../ui/screens/blog/BlogScreen"
 
-const BlogIndex = ({ data, location, pageContext: { locale } }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
-
-  return (
-    <BlogLayout location={location} title={siteTitle} locale={locale}>
-      <SEO title="All posts" />
-      <h2 style={{ textAlign: `center` }}>
-        <FormattedMessage id="latest-blog" />
-      </h2>
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3 className="mt-8">
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {titleize(title)}
-                </Link>
-              </h3>
-              <small style={{ opacity: `0.8` }}>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        )
-      })}
-    </BlogLayout>
-  )
+const BlogPage = ({ data, location, pageContext: { locale } }) => {
+  return <BlogScreen data={data} location={location} locale={locale} />
 }
 
-export default BlogIndex
+export default BlogPage
 
 export const pageQuery = graphql`
   query {

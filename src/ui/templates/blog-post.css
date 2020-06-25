@@ -1,0 +1,27 @@
+section {
+  @apply leading-loose;
+}
+
+section h2 {
+  @apply text-2xl;
+  @apply font-bold;
+  @apply py-4;
+}
+
+section a {
+  @apply text-blue-500;
+}
+
+section ol {
+  @apply list-decimal;
+  @apply list-outside;
+  @apply py-4;
+}
+
+section div {
+  @apply py-4;
+}
+
+section p {
+  @apply py-2;
+}
