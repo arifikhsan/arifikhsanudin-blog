@@ -15,15 +15,21 @@ class HeaderMenu extends Component {
     const { open } = this.state
 
     return (
-      <div className="max-w-5xl mx-auto">
-        {open && <OverlayMenu toggleOpen={this.toggleOpen} />}
-        <div className="flex items-center justify-between">
-          <HomeLink />
-          <button className="p-4 md:hidden" onClick={this.toggleOpen}>
-            Menu
-          </button>
-          <HeaderDesktopMenu className="hidden md:block" />
+      <div>
+        <div className="fixed z-20 w-full bg-white">
+          <div className="max-w-5xl mx-auto">
+            {open && <OverlayMenu toggleOpen={this.toggleOpen} />}
+            <div className="flex items-center justify-between">
+              <HomeLink />
+              <button className="p-4 md:hidden" onClick={this.toggleOpen}>
+                Menu
+              </button>
+              <HeaderDesktopMenu className="hidden md:block" />
+            </div>
+          </div>
+          <hr />
         </div>
+        <div className="p-6"></div>
       </div>
     )
   }
