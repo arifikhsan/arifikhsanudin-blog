@@ -19,16 +19,10 @@ const GatsbySection = ({ data }) => {
             const image = node.frontmatter.featuredImage.childImageSharp.fluid
 
             return (
-              <div key={node.fields.slug} className="w-full my-8 md:w-1/2">
-                <Img
-                  fluid={image}
-                  className="rounded-lg h-52"
-                  style={{
-                    boxShadow: `0px 0px 16px rgba(0,0,0,0.1)`,
-                  }}
-                />
+              <div key={node.fields.slug} className="w-full my-8 md:p-4 md:w-1/2">
+                <Img fluid={image} className="object-cover border rounded-lg" />
                 <h3 className="mt-8 text-2xl font-bold">{title}</h3>
-                <p className="mt-4 text-base">{node.frontmatter.description}</p>
+                <p className="mt-4">{node.frontmatter.description}</p>
                 {node.frontmatter.links &&
                   node.frontmatter.links.map(link => {
                     return (

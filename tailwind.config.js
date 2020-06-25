@@ -3,8 +3,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      display: ["Montserrat"],
-      body: ["Merriweather"],
+      body: ["Open Sans"],
     },
   },
   variants: {},

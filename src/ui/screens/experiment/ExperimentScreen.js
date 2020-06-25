@@ -7,15 +7,15 @@ import SEO from "../../components/seo"
 
 const Posts = ({ experiments }) => {
   return (
-    <div className="flex flex-wrap justify-center">
-      <div className="w-full mt-4 md:w-1/2">
+    <div className="">
+      <div className="flex flex-wrap w-full max-w-3xl mx-auto mt-4">
         {experiments.edges.map(experiment => {
           const frontmatter = experiment.node.childMarkdownRemark.frontmatter
           const id = experiment.node.childMarkdownRemark.id
 
           return (
-            <div key={id} className="p-4 my-8">
-              <h3 className="py-4 text-2xl font-bold">{frontmatter.title}</h3>
+            <div key={id} className="p-4 my-8 md:w-1/2">
+              <h3 className="py-4 text-2xl font-bold text-gray-800">{frontmatter.title}</h3>
               <p className="py-4">{frontmatter.description}</p>
               <div className="flex mt-4 justify-evenly">
                 <GithubLink repo={frontmatter.github_url} />

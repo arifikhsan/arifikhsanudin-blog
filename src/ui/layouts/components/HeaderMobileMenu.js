@@ -1,7 +1,7 @@
 import React from "react"
 import LocalizedAniLink from "../../components/links/localized-ani-link"
 
-const MenuLink = props => {
+const HeaderMobileMenu = props => {
   return (
     <div
       className="flex flex-col items-center justify-center text-center md:row md:justify-end"
@@ -34,4 +34,4 @@ const MenuLink = props => {
   )
 }
 
-export default MenuLink
+export default HeaderMobileMenu

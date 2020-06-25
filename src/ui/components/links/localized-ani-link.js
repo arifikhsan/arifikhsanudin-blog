@@ -15,19 +15,10 @@ const LocalizedAniLink = ({
 }) => {
   const path = locales[locale].default ? to : `/${locale}${to}`
   return (
-    <AniLink
-      paintDrip
-      hex="#1E88E5"
-      style={{
-        boxShadow: `none`,
-        textDecoration: `none`,
-        color: `inherit`,
-        ...style,
-      }}
-      to={path}
-      {...props}
-    >
-      <FormattedMessage id={title} />
+    <AniLink paintDrip hex="#1E88E5" to={path} {...props}>
+      <div className="inline-block">
+        <FormattedMessage id={title} />
+      </div>
     </AniLink>
   )
 }
