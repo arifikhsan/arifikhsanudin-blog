@@ -15,7 +15,7 @@ class HeaderMenu extends Component {
     const { open } = this.state
 
     return (
-      <div className="max-w-5xl mx-auto border-b">
+      <div className="max-w-5xl mx-auto">
         {open && <OverlayMenu toggleOpen={this.toggleOpen} />}
         <div className="flex items-center justify-between">
           <HomeLink />

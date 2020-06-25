@@ -11,10 +11,12 @@ const Layout = ({ locale, children }) => {
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <HeaderMenu />
+      <hr />
       <div className="z-0 max-w-5xl p-4 mx-auto font-body">
         <main>{children}</main>
       </div>
-      <div className="max-w-5xl mx-auto border-t">
+      <hr />
+      <div className="max-w-5xl mx-auto">
         <div className="flex flex-col items-center justify-center p-4">
           <p>arif.ikhsanudin.id@gmail.com</p>
         </div>
