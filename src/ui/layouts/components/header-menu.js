@@ -7,18 +7,16 @@ const OverlayMenu = ({ toggleOpen }) => {
   return (
     <div className="fixed inset-0 z-50 h-screen bg-white">
       <div className="flex flex-col justify-between h-full">
-        <div className="flex justify-between p-4 border-b">
-          <p>{"o((>ω< ))o"}</p>
-          <button onClick={toggleOpen} className="">
+        <div className="flex justify-end border-b">
+          <button onClick={toggleOpen} className="p-4">
             <FormattedMessage id="close" />
           </button>
         </div>
         <div className="flex items-center justify-center">
           <MenuLink />
         </div>
-        <div className="inline-flex justify-between p-4 border-t">
-          <p>arifikhsanudin.now.sh</p>
-          <p>（*＾-＾*）</p>
+        <div className="inline-flex justify-start p-4 border-t">
+          <p>arif.ikhsanudin.id@gmail.com</p>
         </div>
       </div>
     </div>

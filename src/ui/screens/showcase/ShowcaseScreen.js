@@ -39,7 +39,7 @@ const GatsbySection = ({ data }) => {
                         {link.internal ? (
                           <Link
                             to={link.link}
-                            className="px-6 py-4 duration-500 rounded-lg hover:bg-blue-500 hover:text-white"
+                            className="px-6 py-4 text-lg font-semibold text-gray-800 duration-500 hover:text-gray-600"
                           >
                             {link.title}
                           </Link>
@@ -48,7 +48,7 @@ const GatsbySection = ({ data }) => {
                             href={link.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-6 py-4 duration-500 rounded-lg hover:bg-blue-500 hover:text-white"
+                            className="px-6 py-4 text-lg font-semibold text-gray-800 duration-500 hover:text-gray-600"
                           >
                             {link.title}
                           </a>
