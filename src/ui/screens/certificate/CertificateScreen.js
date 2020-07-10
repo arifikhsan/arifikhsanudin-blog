@@ -8,18 +8,10 @@ import lodash from "lodash"
 import titleize from "titleize"
 
 const Certificates = ({ certificates }) => {
-  // console.log(certificates.edges)
   const categoryCertificate = lodash.groupBy(
     certificates.edges,
     "node.childMarkdownRemark.frontmatter.category"
   )
-  // console.log(categoryCertificate)
-
-  // let categories = []
-  // for(const [key, value] of Object.entries(categoryCertificate)) {
-  //   categories.push(key)
-  // }
-  // console.log(categories)
 
   return (
     <div>
@@ -30,7 +22,7 @@ const Certificates = ({ certificates }) => {
 
           return (
             <div key={categoryName}>
-              <h3 className="mt-12 text-3xl font-bold">{titleize(categoryName)}</h3>
+              <h3 className="mt-10 text-2xl font-bold">{titleize(categoryName)}</h3>
               <div className="mt-8">
                 <div className="max-w-3xl mx-auto mt-4 md:flex-wrap md:flex md:justify-center md:items-start">
                   {categoryValue.map(certificate => {
