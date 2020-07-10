@@ -20,7 +20,7 @@ export const pageQuery = graphql`
         sourceInstanceName: { eq: "certificate" }
         extension: { eq: "md" }
       }
-      sort: { fields: [childMarkdownRemark___frontmatter___date], order: DESC}
+      sort: { fields: [childMarkdownRemark___frontmatter___date], order: ASC}
       limit: 1000
     ) {
       edges {
