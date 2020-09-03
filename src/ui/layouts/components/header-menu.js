@@ -16,7 +16,7 @@ class HeaderMenu extends Component {
 
     return (
       <div>
-        <div className="fixed z-20 w-full bg-white">
+        <div className="fixed z-40 w-full bg-white">
           <div className="max-w-5xl mx-auto">
             {open && <OverlayMenu toggleOpen={this.toggleOpen} />}
             <div className="flex items-center justify-between">
@@ -29,7 +29,7 @@ class HeaderMenu extends Component {
           </div>
           <hr />
         </div>
-        <div className="p-6"></div>
+        {/* <div className="p-6"></div> */}
       </div>
     )
   }

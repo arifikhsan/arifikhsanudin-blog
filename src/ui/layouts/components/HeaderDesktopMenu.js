@@ -7,22 +7,22 @@ const HeaderDesktopMenu = props => {
       <LocalizedAniLink
         to="/showcase"
         title="showcase"
-        className="inline-block px-6 py-4 text-gray-800 duration-500 md:py-6 md:px-8 lg:text-xl hover:text-gray-600"
+        className="inline-block px-6 py-4 text-gray-800 duration-500 md:py-6 md:px-8 hover:text-gray-600"
       />
       <LocalizedAniLink
         to="/experiment"
         title="experiment"
-        className="inline-block px-6 py-4 text-gray-800 duration-500 md:py-6 md:px-8 lg:text-xl hover:text-gray-600"
+        className="inline-block px-6 py-4 text-gray-800 duration-500 md:py-6 md:px-8 hover:text-gray-600"
       />
       <LocalizedAniLink
         to="/certificate"
         title="certificate"
-        className="inline-block px-6 py-4 text-gray-800 duration-500 md:py-6 md:px-8 lg:text-xl hover:text-gray-600"
+        className="inline-block px-6 py-4 text-gray-800 duration-500 md:py-6 md:px-8 hover:text-gray-600"
       />
       <LocalizedAniLink
         to="/blog"
         title="blog"
-        className="inline-block px-6 py-4 text-gray-800 duration-500 md:py-6 md:px-8 lg:text-xl hover:text-gray-600"
+        className="inline-block px-6 py-4 text-gray-800 duration-500 md:py-6 md:px-8 hover:text-gray-600"
       />
     </div>
   )
