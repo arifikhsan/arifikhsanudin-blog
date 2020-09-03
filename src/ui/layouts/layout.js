@@ -15,8 +15,25 @@ const Layout = ({ locale, children }) => {
         <div className="max-w-5xl p-4 mx-auto">
           <main>{children}</main>
         </div>
-        <div className="flex flex-col items-center justify-center p-4">
-          <p>arif.ikhsanudin.id@gmail.com</p>
+        <div className="absolute bottom-0 left-0 right-0">
+          <div className="flex flex-row items-center justify-center p-4 bg-white">
+            <a
+              className="underline"
+              href="https://www.instagram.com/arif.ikhsanudin.ids/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+            <a
+              className="ml-2 underline"
+              href="https://github.com/arifikhsan/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
       </div>
     </IntlProvider>
