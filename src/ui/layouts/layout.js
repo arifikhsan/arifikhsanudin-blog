@@ -15,7 +15,7 @@ const Layout = ({ locale, children }) => {
         <div className="max-w-5xl p-4 mx-auto">
           <main>{children}</main>
         </div>
-        <div className="absolute bottom-0 left-0 right-0">
+        <div className="absolute bottom-0 left-0 right-0 border-t">
           <div className="flex flex-row items-center justify-center p-4 bg-white">
             <a
               className="underline"
@@ -26,12 +26,20 @@ const Layout = ({ locale, children }) => {
               Instagram
             </a>
             <a
-              className="ml-2 underline"
+              className="ml-4 underline"
               href="https://github.com/arifikhsan/"
               target="_blank"
               rel="noopener noreferrer"
             >
               GitHub
+            </a>
+            <a
+              className="ml-4 underline"
+              href="https://www.dicoding.com/users/273428"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Dicoding
             </a>
           </div>
         </div>
