@@ -16,12 +16,12 @@ class HeaderMenu extends Component {
 
     return (
       <div>
-        <div className="fixed z-40 w-full bg-white">
+        <div className="fixed z-40 w-full font-semibold bg-white font-display">
           <div className="max-w-5xl mx-auto">
             {open && <OverlayMenu toggleOpen={this.toggleOpen} />}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between font-semibold">
               <HomeLink />
-              <button className="p-4 md:hidden" onClick={this.toggleOpen}>
+              <button className="p-4 font-semibold md:hidden" onClick={this.toggleOpen}>
                 Menu
               </button>
               <HeaderDesktopMenu className="hidden md:block" />
@@ -42,7 +42,7 @@ const OverlayMenu = ({ toggleOpen }) => {
     <div className="fixed inset-0 z-50 h-screen bg-white">
       <div className="flex flex-col justify-between h-full">
         <div className="flex justify-end border-b">
-          <button onClick={toggleOpen} className="p-4">
+          <button onClick={toggleOpen} className="p-4 font-semibold">
             <FormattedMessage id="close" />
           </button>
         </div>

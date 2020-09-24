@@ -55,7 +55,7 @@ export default function BackgroundParticle() {
             },
             particles: {
               color: {
-                value: "#000000",
+                value: "#acacac",
               },
               line_linked: {
                 color: "#acacac",

@@ -41,7 +41,9 @@
     "react-i18next": "^11.7.2",
     "react-intl": "^5.8.0",
     "react-tsparticles": "^1.17.10",
-    "titleize": "^2.1.0"
+    "titleize": "^2.1.0",
+    "typeface-metropolis": "^0.0.74",
+    "typeface-open-sans": "^0.0.75"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",

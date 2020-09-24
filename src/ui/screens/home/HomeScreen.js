@@ -9,12 +9,12 @@ const HomeScreen = ({ location, siteTitle, locale }) => {
     <PageLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Homepage" />
       <BackgroundParticle />
-      <div className="py-12 md:py-24">
+      <div className="flex items-center justify-center py-12 md:py-24">
         <div className="flex flex-col items-center justify-center h-full py-6 text-center md:py-12">
-          <h1 className="py-3 text-4xl font-black text-gray-900">
+          <h1 className="py-3 text-5xl font-black text-gray-900 font-display">
             <FormattedMessage id="hello" />
           </h1>
-          <h2 className="py-3 text-xl font-medium text-gray-800">
+          <h2 className="py-3 text-xl font-bold text-gray-800">
             <FormattedMessage id="whatdoido" />
           </h2>
         </div>

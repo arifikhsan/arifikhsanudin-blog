@@ -3,7 +3,7 @@ import LocalizedAniLink from "../../components/links/localized-ani-link"
 
 const HeaderDesktopMenu = props => {
   return (
-    <div className="" {...props}>
+    <div className="font-semibold" {...props}>
       <LocalizedAniLink
         to="/showcase"
         title="showcase"
