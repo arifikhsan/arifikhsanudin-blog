@@ -4,7 +4,7 @@ import Layout from "./layout"
 const PageLayout = ({ children, ...props }) => {
   return (
     <Layout {...props}>
-      <div>{children}</div>
+      <div className="w-full h-full">{children}</div>
     </Layout>
   )
 }
