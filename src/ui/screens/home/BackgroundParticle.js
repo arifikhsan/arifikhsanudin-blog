@@ -72,7 +72,7 @@ export default function BackgroundParticle() {
                 enable: true,
                 outMode: "out",
                 random: false,
-                speed: 6,
+                speed: 2,
                 straight: false,
                 bounce: false,
                 attract: {
