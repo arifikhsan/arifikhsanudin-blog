@@ -62,7 +62,7 @@ const CertificateScreen = ({ location, data, locale }) => {
         description="Everything i have achieved. But not all."
       />
       <div className="text-center">
-        <div className="flex flex-col items-center justify-center mt-12">
+        <div className="flex flex-col items-center justify-center pt-24">
           <h1 className="text-3xl font-black">
             <FormattedMessage id="certificate" />
           </h1>

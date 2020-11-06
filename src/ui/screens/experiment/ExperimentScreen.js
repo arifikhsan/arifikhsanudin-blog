@@ -36,7 +36,7 @@ const ExperimentScreen = ({ location, data, locale }) => {
     <ExperimentLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Experiment" description="Everything i touched." />
       <div style={{ textAlign: `center` }}>
-        <div className="flex flex-col items-center justify-center mt-12">
+        <div className="flex flex-col items-center justify-center pt-24">
           <h1 className="text-3xl font-black">
             <FormattedMessage id="experiment" />
           </h1>

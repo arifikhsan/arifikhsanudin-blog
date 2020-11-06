@@ -65,7 +65,7 @@ const ShowcaseScreen = ({ location, data, locale }) => {
     <ShowcaseLayout location={location} locale={locale} title={siteTitle}>
       <SEO title="Showcase" description="Every project i have done." />
       <div className="text-center">
-        <div className="flex flex-col items-center justify-center mt-12">
+        <div className="flex flex-col items-center justify-center pt-24">
           <h1 className="text-3xl font-black">
             <FormattedMessage id="showcase" />
           </h1>
