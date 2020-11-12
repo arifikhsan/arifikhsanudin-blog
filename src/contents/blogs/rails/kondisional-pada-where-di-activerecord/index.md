@@ -4,7 +4,7 @@ date: "2020-03-20T17:46:00.000Z"
 description: Kondisional pada "where" di ActiveRecord
 ---
 
-## Kenapa dilakukan kondisional
+## Kenapa dilakukan kondisional?
 
 Untuk melakukan filter pada *where* jika memenuhi kondisi.
 
