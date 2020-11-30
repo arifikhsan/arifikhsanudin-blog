@@ -8,7 +8,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       display: "Metropolis",
-      body: "Open Sans",
+      body: "Inter",
     },
   },
   variants: {},

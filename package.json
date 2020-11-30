@@ -8,6 +8,9 @@
     "url": "https://github.com/arifikhsan/arifikhsanudin-blog/issues"
   },
   "dependencies": {
+    "fontsource-inter": "^3.0.5",
+    "fontsource-metropolis": "^3.0.1",
+    "fontsource-open-sans": "^3.0.9",
     "gatsby": "^2.27.4",
     "gatsby-image": "^2.6.0",
     "gatsby-plugin-google-analytics": "^2.6.0",
@@ -42,9 +45,7 @@
     "react-i18next": "^11.7.3",
     "react-intl": "^5.10.6",
     "react-tsparticles": "^1.18.11",
-    "titleize": "^2.1.0",
-    "typeface-metropolis": "^0.0.74",
-    "typeface-open-sans": "^0.0.75"
+    "titleize": "^2.1.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.6",

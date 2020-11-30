@@ -1,4 +1,4 @@
 import "prism-themes/themes/prism-dracula.css"
 
-import "typeface-metropolis"
-import "typeface-open-sans"
+import "fontsource-metropolis/all.css"
+import "fontsource-inter/latin.css"
