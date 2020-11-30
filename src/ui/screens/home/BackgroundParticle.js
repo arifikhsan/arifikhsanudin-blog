@@ -22,7 +22,7 @@ export default function BackgroundParticle() {
                   mode: "remove",
                 },
                 onHover: {
-                  enable: false,
+                  enable: true,
                   mode: "repulse",
                 },
                 resize: true,
