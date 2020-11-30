@@ -69,24 +69,25 @@ class ExperimentPostTemplate extends React.Component {
     )
   }
 }
+
 export default ExperimentPostTemplate
 
-export const pageQuery = graphql`
-  query ExperimentPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query ExperimentPostBySlug($slug: String!) {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//     markdownRemark(fields: { slug: { eq: $slug } }) {
+//       id
+//       excerpt(pruneLength: 160)
+//       html
+//       frontmatter {
+//         title
+//         date(formatString: "MMMM DD, YYYY")
+//         description
+//       }
+//     }
+//   }
+// `

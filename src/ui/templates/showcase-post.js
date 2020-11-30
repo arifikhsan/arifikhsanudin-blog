@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 import Bio from "../components/bio"
 import SEO from "../components/seo"
 import titleize from "titleize"
@@ -71,22 +71,22 @@ class ShowcasePostTemplate extends React.Component {
 }
 export default ShowcasePostTemplate
 
-export const pageQuery = graphql`
-  query ShowcasePostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query ShowcasePostBySlug($slug: String!) {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//     markdownRemark(fields: { slug: { eq: $slug } }) {
+//       id
+//       excerpt(pruneLength: 160)
+//       html
+//       frontmatter {
+//         title
+//         date(formatString: "MMMM DD, YYYY")
+//         description
+//       }
+//     }
+//   }
+// `
