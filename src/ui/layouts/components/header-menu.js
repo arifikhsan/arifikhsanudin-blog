@@ -53,7 +53,7 @@ const OverlayMenu = ({ toggleOpen }) => {
           <HeaderMobileMenu />
         </div>
         <div className="inline-flex justify-start px-4 py-6 border-t">
-          <a href="mailto:arif.ikhsanudin.id@gmail.com">
+          <a href="mailto:arif.ikhsanudin.id@gmail.com" className="underline">
             arif.ikhsanudin.id@gmail.com
           </a>
         </div>
