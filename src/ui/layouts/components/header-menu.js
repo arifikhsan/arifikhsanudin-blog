@@ -21,7 +21,10 @@ class HeaderMenu extends Component {
             {open && <OverlayMenu toggleOpen={this.toggleOpen} />}
             <div className="flex items-center justify-between font-semibold">
               <HomeLink />
-              <button className="p-4 font-semibold md:hidden" onClick={this.toggleOpen}>
+              <button
+                className="px-4 py-6 font-semibold md:hidden"
+                onClick={this.toggleOpen}
+              >
                 Menu
               </button>
               <HeaderDesktopMenu className="hidden md:block" />
@@ -50,7 +53,9 @@ const OverlayMenu = ({ toggleOpen }) => {
           <HeaderMobileMenu />
         </div>
         <div className="inline-flex justify-start px-4 py-6 border-t">
-          <p>arif.ikhsanudin.id@gmail.com</p>
+          <a href="mailto:arif.ikhsanudin.id@gmail.com">
+            arif.ikhsanudin.id@gmail.com
+          </a>
         </div>
       </div>
     </div>
