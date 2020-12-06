@@ -7,15 +7,15 @@ import { Link } from "gatsby"
 
 const Posts = ({ posts }) => {
   return (
-    <div>
+    <div className="grid gap-10 mt-8">
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article className="py-4" key={node.fields.slug}>
+          <article key={node.fields.slug}>
             <header>
-              <h3 className="mt-8">
+              <h3>
                 <Link
-                  className="text-2xl font-semibold text-gray-800"
+                  className="text-2xl font-semibold text-gray-800 hover:underline"
                   to={node.fields.slug}
                 >
                   {titleize(title)}
@@ -47,7 +47,7 @@ export const BlogScreen = ({ location, data, locale }) => {
   return (
     <BlogLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Blog tentang pemrograman ruby, javascript, android, flutter, dan lain lain" />
-      <div className="py-24">
+      <div className="py-12">
         <h1 className="text-3xl font-black text-center">
           <FormattedMessage id="latest-blog" />
         </h1>

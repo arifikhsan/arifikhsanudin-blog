@@ -8,6 +8,7 @@
     "url": "https://github.com/arifikhsan/arifikhsanudin-blog/issues"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.3.1",
     "fontsource-inter": "^3.0.5",
     "fontsource-metropolis": "^3.0.1",
     "fontsource-open-sans": "^3.0.9",
@@ -36,6 +37,8 @@
     "i18next": "^19.8.4",
     "i18next-browser-languagedetector": "^6.0.1",
     "i18next-xhr-backend": "^3.2.2",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
     "postcss": "^8.1.10",
     "prism-themes": "^1.5.0",
     "prismjs": "^1.22.0",
