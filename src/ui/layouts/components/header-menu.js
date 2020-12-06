@@ -15,24 +15,21 @@ class HeaderMenu extends Component {
     const { open } = this.state
 
     return (
-      <div>
-        <div className="fixed z-40 w-full font-semibold bg-white font-display">
-          <div className="max-w-5xl mx-auto">
-            {open && <OverlayMenu toggleOpen={this.toggleOpen} />}
-            <div className="flex items-center justify-between font-semibold">
-              <HomeLink />
-              <button
-                className="px-4 py-6 font-semibold md:hidden"
-                onClick={this.toggleOpen}
-              >
-                Menu
-              </button>
-              <HeaderDesktopMenu className="hidden md:block" />
-            </div>
+      <div className="sticky top-0 z-40 w-full font-semibold bg-white font-display">
+        <div className="max-w-5xl mx-auto">
+          {open && <OverlayMenu toggleOpen={this.toggleOpen} />}
+          <div className="flex items-center justify-between font-semibold">
+            <HomeLink />
+            <button
+              className="px-4 py-6 font-semibold md:hidden"
+              onClick={this.toggleOpen}
+            >
+              Menu
+            </button>
+            <HeaderDesktopMenu className="hidden md:block" />
           </div>
-          <hr />
         </div>
-        {/* <div className="p-6"></div> */}
+        <hr />
       </div>
     )
   }

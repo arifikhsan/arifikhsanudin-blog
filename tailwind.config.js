@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors")
+
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -5,10 +7,18 @@ module.exports = {
   },
   purge: ["./src/**/*.js"],
   theme: {
-    extend: {},
     fontFamily: {
       display: "Metropolis",
       body: "Inter",
+    },
+    extend: {
+      colors: {
+        primary: "4361EE",
+        secondary: "EDF0FA",
+        "light-blue": colors.lightBlue,
+        fuchsia: colors.fuchsia,
+        "blue-gray": colors.blueGray,
+      },
     },
   },
   variants: {},

@@ -3,13 +3,7 @@ import { graphql } from "gatsby"
 import ShowcaseScreen from "../ui/screens/showcase/ShowcaseScreen"
 
 const ShowcasePage = ({ data, location, pageContext: { locale } }) => {
-  return (
-    <ShowcaseScreen
-      location={location}
-      data={data}
-      locale={locale}
-    />
-  )
+  return <ShowcaseScreen location={location} data={data} locale={locale} />
 }
 
 export default ShowcasePage
@@ -36,17 +30,7 @@ export const pageQuery = graphql`
             title
             description
             category
-            featuredImage {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            links {
-              title
-              link
-            }
+            link
           }
         }
       }
