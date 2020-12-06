@@ -4,6 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 const locales = require("./src/config/i18n/locales")
 const { kebabCase } = require("lodash")
 const moment = require("moment")
+
 // add slug
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
@@ -91,27 +92,27 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 }
 
-// exports.onCreatePage = ({ page, actions }) => {
-//   const { createPage, deletePage } = actions
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
 
-//   return new Promise((resolve) => {
-//     deletePage(page)
+  return new Promise((resolve) => {
+    deletePage(page)
 
-//     Object.keys(locales).map((lang) => {
-//       const localizedPath = locales[lang].default
-//         ? page.path
-//         : locales[lang].path + page.path
-//       // const localizedPath = locales[lang].path + page.path
+    Object.keys(locales).map((lang) => {
+      const localizedPath = locales[lang].default
+        ? page.path
+        : locales[lang].path + page.path
+      // const localizedPath = locales[lang].path + page.path
 
-//       return createPage({
-//         ...page,
-//         path: localizedPath,
-//         context: {
-//           locale: lang,
-//         },
-//       })
-//     })
+      return createPage({
+        ...page,
+        path: localizedPath,
+        context: {
+          locale: lang,
+        },
+      })
+    })
 
-//     resolve()
-//   })
-// }
+    resolve()
+  })
+}

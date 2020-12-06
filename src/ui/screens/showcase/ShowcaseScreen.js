@@ -12,7 +12,12 @@ const GatsbySection = ({ data }) => {
         const title = node.frontmatter.title
 
         return (
-          <a target="_blank" rel="noreferrer" href={node.frontmatter.link}>
+          <a
+            key={node.id}
+            target="_blank"
+            rel="noreferrer"
+            href={node.frontmatter.link}
+          >
             <div
               key={node.fields.slug}
               className="w-full px-4 py-8 text-white rounded-lg bg-gradient-to-br from-indigo-500 to-light-blue-500"

@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 
 const Posts = ({ posts }) => {
   return (
-    <div className="grid gap-10 mt-8">
+    <div className="grid gap-12 mt-8">
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
