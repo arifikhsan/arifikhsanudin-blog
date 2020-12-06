@@ -92,6 +92,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 }
 
+// internationalization
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
 
@@ -115,4 +116,15 @@ exports.onCreatePage = ({ page, actions }) => {
 
     resolve()
   })
+}
+
+// fix Hot-Loader: react-🔥-dom patch is not detected
+exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
+  const config = getConfig()
+  if (stage.startsWith('develop') && config.resolve) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'react-dom': '@hot-loader/react-dom'
+    }
+  }
 }
