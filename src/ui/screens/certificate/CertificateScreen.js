@@ -66,6 +66,7 @@ const CertificateScreen = ({ location, data, locale }) => {
           <h1 className="text-3xl font-black">
             <FormattedMessage id="certificate" />
           </h1>
+          <p className="mt-2">Achievement and certificates</p>
         </div>
         <div className="my-10">
           <Certificates certificates={data.certificates} />
