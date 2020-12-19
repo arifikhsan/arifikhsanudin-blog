@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors")
+const config = require("./src/config/siteConfig")
 
 module.exports = {
   future: {
@@ -13,7 +14,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#4361EE",
+        primary: config.primaryColor,
         secondary: "#EDF0FA",
         "light-blue": colors.lightBlue,
         fuchsia: colors.fuchsia,

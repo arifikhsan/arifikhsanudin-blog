@@ -1,3 +1,5 @@
+const config = require("./src/config/siteConfig")
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -92,7 +94,7 @@ module.exports = {
         short_name: `ArifIkhsanudinBlog`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#1E88E5`,
+        theme_color: config.primaryColor,
         display: `minimal-ui`,
         icon: `src/assets/favicon.png`,
       },
