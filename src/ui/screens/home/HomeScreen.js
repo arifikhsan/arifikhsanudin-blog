@@ -3,6 +3,7 @@ import PageLayout from "../../layouts/page-layout"
 import SEO from "../../components/seo"
 import BackgroundParticle from "./BackgroundParticle"
 import anime from "animejs"
+import { isServerSide } from "../../../utils/utils"
 
 const HomeScreen = ({ location, siteTitle, locale }) => {
   const animeLetter = (letters) => {
@@ -19,7 +20,7 @@ const HomeScreen = ({ location, siteTitle, locale }) => {
     <PageLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Homepage" />
       <BackgroundParticle />
-      <div className="flex items-center justify-center h-full py-20 md:py-32 md:w-full">
+      <div className="flex items-center justify-center h-full py-20 md:w-full">
         <div className="flex flex-col justify-center h-full py-6 -mt-8 md:text-center sm:mt-0 md:py-12">
           <div className="py-3 text-gray-900 font-display">
             <h1
@@ -48,6 +49,8 @@ const HomeScreen = ({ location, siteTitle, locale }) => {
 }
 
 const letterAnimation = () => {
+  if (isServerSide()) return null
+
   anime
     .timeline({ loop: false })
 
@@ -75,4 +78,5 @@ const letterAnimation = () => {
       delay: (el, i) => 150 * (i + 1),
     })
 }
+
 export default HomeScreen
