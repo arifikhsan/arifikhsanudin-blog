@@ -21,7 +21,7 @@ class HeaderMenu extends Component {
           <div className="flex items-center justify-between font-semibold">
             <HomeLink />
             <button
-              className="px-4 py-6 font-semibold md:hidden"
+              className="px-4 py-6 font-semibold text-gray-800 transition duration-500 hover:text-primary md:hidden"
               onClick={this.toggleOpen}
             >
               Menu

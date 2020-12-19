@@ -4,6 +4,7 @@ import id from "../../config/locales/id.json"
 import en from "../../config/locales/en.json"
 import "../../assets/styles/index.css"
 import HeaderMenu from "./components/header-menu"
+import Footer from "./components/Footer"
 
 const messages = { id, en }
 
@@ -16,26 +17,7 @@ const Layout = ({ locale, children }) => {
           <main className="h-full">{children}</main>
         </div>
       </div>
-      <div className="sticky bottom-0 left-0 right-0 border-t">
-        <div className="flex flex-row items-center justify-center px-4 py-6 bg-white">
-          <a
-            className="ml-6 underline"
-            href="https://github.com/arifikhsan/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          <a
-            className="ml-6 underline"
-            href="https://www.dicoding.com/users/273428"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Dicoding
-          </a>
-        </div>
-      </div>
+      <Footer />
     </IntlProvider>
   )
 }
