@@ -4,7 +4,7 @@ const Footer = () => {
   const dateNow = new Date()
 
   return (
-    <div className="sticky bottom-0 left-0 right-0">
+    <div className="sticky bottom-0 left-0 right-0 bg-white">
       <div className="flex flex-col items-start px-4 py-12 space-y-6 text-gray-800 border-t md:space-y-0 justify-evenly sm:flex-row">
         <div className="flex flex-col items-start space-y-2 text-left">
           <p className="text-lg font-medium">Social Profile</p>
