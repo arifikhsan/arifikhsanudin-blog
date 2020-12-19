@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.3.1",
+    "animejs": "^3.2.1",
     "fontsource-inter": "^3.0.5",
     "fontsource-metropolis": "^3.0.1",
     "fontsource-open-sans": "^3.0.9",
