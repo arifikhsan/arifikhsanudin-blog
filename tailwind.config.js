@@ -13,10 +13,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "4361EE",
-        secondary: "EDF0FA",
+        primary: "#4361EE",
+        secondary: "$EDF0FA",
         "light-blue": colors.lightBlue,
         fuchsia: colors.fuchsia,
+        cyan: colors.cyan,
+        teal: colors.teal,
         "blue-gray": colors.blueGray,
       },
     },
