@@ -34,7 +34,7 @@ const Certificates = ({ certificates }) => {
 
                     return (
                       <div key={id} className="w-full py-6 md:px-4 md:w-1/2">
-                        <Img fluid={image} className="border rounded-lg h-52" />
+                        <Img fluid={image} className="object-cover rounded-lg shadow-2xl" />
                         <h3 className="py-4 mt-4 text-2xl font-bold">
                           {frontmatter.title}
                         </h3>
