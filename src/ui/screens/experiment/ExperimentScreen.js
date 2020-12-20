@@ -17,7 +17,7 @@ const Posts = ({ experiments }) => {
               href={frontmatter.url}
               target="_blank"
               rel="noreferrer"
-              className="flex flex-col px-4 py-8 space-y-4 transition duration-500 transform rounded-lg shadow-xl hover:rotate-2 focus:-rotate-2 hover:shadow-2xl text-secondary bg-gradient-to-tr from-indigo-500 to-light-blue-500"
+              className="flex flex-col px-4 py-8 space-y-4 transition duration-500 transform rounded-lg shadow-xl hover:rotate-2 focus:-rotate-2 hover:shadow-2xl text-secondary bg-gradient-to-tr from-purple-500 to-fuchsia-500"
             >
               <h3 className="py-4 text-xl font-bold text-white">
                 {frontmatter.title}
@@ -49,7 +49,7 @@ const ExperimentScreen = ({ location, data, locale }) => {
           </p>
         </div>
         <div className="my-4">
-          <h2 className="mt-10 text-2xl font-bold">Flutter</h2>
+          {/* <h2 className="mt-10 text-2xl font-bold">Flutter</h2> */}
           <Posts experiments={data.experiments} />
         </div>
       </div>

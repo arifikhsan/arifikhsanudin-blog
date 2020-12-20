@@ -16,16 +16,18 @@ const Certificates = ({ certificates }) => {
   return (
     <div>
       <div>
-        {Object.entries(categoryCertificate).map(category => {
+        {Object.entries(categoryCertificate).map((category) => {
           let categoryName = category[0]
           let categoryValue = category[1]
 
           return (
             <div key={categoryName}>
-              <h3 className="mt-10 text-2xl font-bold">{titleize(categoryName)}</h3>
+              <h3 className="mt-10 text-2xl font-bold">
+                {titleize(categoryName)}
+              </h3>
               <div className="mt-8">
                 <div className="max-w-3xl mx-auto mt-4 md:flex-wrap md:flex md:justify-center md:items-start">
-                  {categoryValue.map(certificate => {
+                  {categoryValue.map((certificate) => {
                     const id = certificate.node.childMarkdownRemark.id
                     const frontmatter =
                       certificate.node.childMarkdownRemark.frontmatter
@@ -34,7 +36,10 @@ const Certificates = ({ certificates }) => {
 
                     return (
                       <div key={id} className="w-full py-6 md:px-4 md:w-1/2">
-                        <Img fluid={image} className="object-cover rounded-lg shadow-2xl" />
+                        <Img
+                          fluid={image}
+                          className="object-cover transition duration-500 rounded-lg shadow-xl hover:shadow-2xl"
+                        />
                         <h3 className="py-4 mt-4 text-xl font-bold">
                           {frontmatter.title}
                         </h3>
@@ -61,8 +66,8 @@ const CertificateScreen = ({ location, data, locale }) => {
         title="Certificate"
         description="Everything i have achieved. But not all."
       />
-      <div className="text-center">
-        <div className="flex flex-col items-center justify-center pt-24">
+      <div className="pt-12 pb-24 text-center">
+        <div className="flex flex-col items-center justify-center">
           <h1 className="text-3xl font-black">
             <FormattedMessage id="certificate" />
           </h1>

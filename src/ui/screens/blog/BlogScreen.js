@@ -47,10 +47,11 @@ export const BlogScreen = ({ location, data, locale }) => {
   return (
     <BlogLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Blog tentang pemrograman ruby, javascript, android, flutter, dan lain lain" />
-      <div className="py-12">
+      <div className="pt-12 pb-24">
         <h1 className="text-3xl font-black text-center">
           <FormattedMessage id="latest-blog" />
         </h1>
+        <p className="mt-2 text-center">Blog and publication</p>
         <div className="py-6">
           <Posts posts={posts} />
         </div>
