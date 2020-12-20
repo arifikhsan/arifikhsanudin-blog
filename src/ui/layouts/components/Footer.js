@@ -18,7 +18,7 @@ const Footer = () => {
           </a>
           <a
             className="hover:underline"
-            href="https://www.dicoding.com/users/273428"
+            href="https://www.dicoding.com/users/arifikhsanudin"
             target="_blank"
             rel="noopener noreferrer"
           >
