@@ -42,7 +42,7 @@ const ShowcaseScreen = ({ location, data, locale }) => {
         title="Showcase"
         description="Every project i have ever worked on."
       />
-      <div className="py-24 text-center">
+      <div className="pt-12 pb-24 text-center md:pt-16">
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-3xl font-black">
             <FormattedMessage id="showcase" />
