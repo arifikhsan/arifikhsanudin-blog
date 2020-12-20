@@ -6,6 +6,7 @@ import anime from "animejs"
 import { isServerSide } from "../../../utils/utils"
 
 const HomeScreen = ({ location, siteTitle, locale }) => {
+
   const animeLetter = (letters) => {
     return [...letters].map((letter, index) => (
       <span key={index} className="letter">

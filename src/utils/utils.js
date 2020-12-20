@@ -1,3 +1,5 @@
+import { isNil } from "lodash"
+
 export const isDevelopmentEnv = () => {
   return process.env.NODE_ENV === "development"
 }
@@ -21,3 +23,5 @@ export const isServerSide = () => {
 
   return isServer
 }
+
+export const isNotNil = (object) => !isNil(object)
