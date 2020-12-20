@@ -33,7 +33,7 @@ export const pageQuery = graphql`
             frontmatter {
               title
               description
-              github_url
+              url
             }
           }
           extension
