@@ -2,7 +2,6 @@ import React from "react"
 import titleize from "titleize"
 import BlogLayout from "../../layouts/BlogLayout"
 import SEO from "../../components/seo"
-import { FormattedMessage } from "react-intl"
 import { Link } from "gatsby"
 
 const Posts = ({ posts }) => {
@@ -15,7 +14,7 @@ const Posts = ({ posts }) => {
             <header>
               <h3>
                 <Link
-                  className="text-2xl font-semibold text-gray-800 hover:underline"
+                  className="text-xl font-medium text-gray-800 hover:underline"
                   to={node.fields.slug}
                 >
                   {titleize(title)}
@@ -49,7 +48,7 @@ export const BlogScreen = ({ location, data, locale }) => {
       <SEO title="Blog tentang pemrograman ruby, javascript, android, flutter, dan lain lain" />
       <div className="pt-12 pb-24">
         <h1 className="text-3xl font-black text-center">
-          <FormattedMessage id="latest-blog" />
+          Blog
         </h1>
         <p className="mt-2 text-center">Blog and publication</p>
         <div className="py-6">
