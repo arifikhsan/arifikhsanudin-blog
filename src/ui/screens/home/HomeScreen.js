@@ -6,7 +6,6 @@ import anime from "animejs"
 import { isServerSide } from "../../../utils/utils"
 
 const HomeScreen = ({ location, siteTitle, locale }) => {
-
   const animeLetter = (letters) => {
     return [...letters].map((letter, index) => (
       <span key={index} className="letter">
@@ -37,11 +36,21 @@ const HomeScreen = ({ location, siteTitle, locale }) => {
               {animeLetter("Arif Ikhsanudin")}
             </h1>
           </div>
-          <div className="mt-8 text-2xl font-medium text-gray-800">
+          <div className="mt-4 text-2xl font-medium text-gray-800">
             <h2 id="todo">
               I am a <span className="font-bold">confident</span> Ruby on Rails
               Backend Developer
             </h2>
+          </div>
+          <div className="pt-6 text-gray-800 md:pt-10">
+            <a
+              href="https://docs.google.com/document/d/1h-NrlRMdei6felFWtrrNfOwOZVk-feZBEle0Fz6Gybo/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 font-bold transition duration-500 border border-gray-600 rounded-sm hover:text-white hover:bg-gray-800"
+            >
+              View Curriculum Vitae
+            </a>
           </div>
         </div>
       </div>

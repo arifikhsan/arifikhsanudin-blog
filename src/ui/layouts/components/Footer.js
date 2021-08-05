@@ -18,6 +18,14 @@ const Footer = () => {
           </a>
           <a
             className="hover:underline"
+            href="https://www.linkedin.com/in/arif-ikhsanudin/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            className="hover:underline"
             href="https://www.dicoding.com/users/arifikhsanudin"
             target="_blank"
             rel="noopener noreferrer"
