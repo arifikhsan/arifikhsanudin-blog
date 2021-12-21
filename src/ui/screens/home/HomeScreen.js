@@ -19,7 +19,6 @@ const HomeScreen = ({ location, siteTitle, locale }) => {
   return (
     <PageLayout location={location} title={siteTitle} locale={locale}>
       <SEO title="Homepage" />
-      <BackgroundParticle />
       <div className="flex items-center justify-center h-full py-20 md:w-full">
         <div className="flex flex-col justify-center h-full py-6 -mt-8 md:text-center sm:mt-0 md:py-12">
           <div className="py-3 text-gray-900 font-display">
@@ -44,7 +43,7 @@ const HomeScreen = ({ location, siteTitle, locale }) => {
           </div>
           <div className="pt-6 text-gray-800 md:pt-10">
             <a
-              href="https://docs.google.com/document/d/1h-NrlRMdei6felFWtrrNfOwOZVk-feZBEle0Fz6Gybo/edit?usp=sharing"
+              href="https://drive.google.com/file/d/10HHpzF7QTu1EBSkiFJeYI_XrBE0E3fQ8/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 font-bold transition duration-500 border border-gray-600 rounded-sm hover:text-white hover:bg-gray-800"
