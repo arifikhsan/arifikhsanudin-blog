@@ -43,7 +43,7 @@ const HomeScreen = ({ location, siteTitle, locale }) => {
           </div>
           <div className="pt-6 text-gray-800 md:pt-10">
             <a
-              href="https://drive.google.com/file/d/10HHpzF7QTu1EBSkiFJeYI_XrBE0E3fQ8/view?usp=sharing"
+              href="https://drive.google.com/file/d/11PRZ7p5QsHPcgTDFkjM7c8qcP2K6yTTl/view?usp=share_link"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 font-bold transition duration-500 border border-gray-600 rounded-sm hover:text-white hover:bg-gray-800"
